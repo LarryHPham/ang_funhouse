@@ -1,0 +1,20 @@
+<div class="mag_container mag_text mag_r1_text">
+   <span *ngFor="#magListings of magRecommendations?.similar; #i=index">
+       <div *ngIf="i === 0" class="banner" style="margin-top: 1vw">Explore Similar Properties</div>
+           <span *ngIf="i === 0">
+                <div class="mag_po_address mag_po_address_sm"><i class="fa fa-map-marker"></i>{{magListings.address.fullStreetAddress}}
+                </div>
+                <span *ngFor="#p of magListings?.content; #s=index">
+                    <adzone-component *ngIf="s === 2" style="float: right;"></adzone-component>
+                    <span [innerHTML]="p"></span><br><br>
+                </span>
+           </span>
+       <span *ngIf="i === 1">
+           <div class="mag_po_address mag_po_address_sm"><i class="fa fa-map-marker"></i>{{magListings.address.fullStreetAddress}}
+           </div>
+           <span *ngFor="#p of magListings?.content; #i=index">
+               <span [innerHTML]="p"></span><br><br>
+           </span>
+       </span>
+   </span>
+</div>

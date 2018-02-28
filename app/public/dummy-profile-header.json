@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "message": "",
+  "data": {
+    "listingStatus": "Active",
+    "listingID": 4,
+    "city": "Vinton",
+    "state": "IA",
+    "zipCode": 52349,
+    "address": "503 C Avenue",
+    "listingPrice": 108000,
+    "squareFeet": 3478,
+    "agent": "Iowa Land Management Co",
+    "phoneNumber": 3194725353,
+    "officeNumber": 3194725353,
+    "email": "iowaland@mebbs.com",
+    "lastUpdated": "2016-02-03 15:50:27",
+    "originalLink": "http://listings.listhub.net/pages/BCMLSIA/12787/?channel=passfail",
+    "listingImage": "http://photos.listhub.net/BCMLSIA/12787/1?lm=20160203T155029"
+  }
+}

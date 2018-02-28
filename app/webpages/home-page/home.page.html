@@ -1,0 +1,40 @@
+<hero-component *ngIf="!isMyHouseKitHome && geoData" [geoData]="geoData" [cityLocation]="geoData.cityUrl" [stateLocation]="geoData.stateUrl"></hero-component>
+  <div class="page wrapper" *ngIf="!isMyHouseKitHome && geoData">
+      <div class="inner-wrapper-home">
+          <div class="container-popout">
+            <h3>Preview of Your Magazine</h3>
+            <img class="content-highlight" src="/app/public/content_highlight.png">
+          </div>
+          <h2>WHY SHOULD YOU USE JOYFUL HOME?</h2>
+          <div class="segment segment-one">
+            <div class="segment-circle">
+              <svg width="100" height="100" viewBox="0 0 100 100"><path d="m388 235l-144 0 0-62 144 0z m91-135l-347 0 0-59-36-31-37 31 0 59-56 0 0 72 56 0 0 329 73 0 0-328 86 0 0 62-42 0 0 219 280 0 0-219-42 0 0-62 64 0 31-36z" transform="scale(0.19)"></path></svg>
+            </div>
+            <h3>Sell Your Home</h3>
+            <p>
+              Use the search above to take you to the magazine.
+            </p>
+          </div>
+          <div class="segment segment-two">
+            <div class="segment-circle">
+              <svg width="100" height="100" viewBox="0 0 100 100"><path d="m93 29l153 105 0 356c-54-77-152-108-152-108l0-353z m16 439c0 0-44-23-104-13l0-351 15 0 0 333c0 0 64-1 89 31z m60-12c-23-33-96-59-96-59l0-328-31-12 0 358c0 0 32 4 47 8 54 15 80 33 80 33z m249-427l-152 105 0 356c53-77 152-108 152-108z m-16 439c0 0 44-23 104-13l0-351-14 0 0 333c0 0-65-1-90 31z m-60-12c23-33 96-59 96-59l0-328 30-12 0 358c0 0-31 4-47 8-53 15-79 33-79 33z" transform="scale(0.19)"></path></svg>
+            </div>
+            <h3>Read About It</h3>
+            <p>
+              Explore the rich content written about your home.
+            </p>
+          </div>
+          <div class="segment segment-three">
+            <div class="segment-circle">
+              <svg width="100" height="100" viewBox="0 0 100 100"><path d="m427 12c-38-23-86-12-111 24-10-2-20-3-30-3-82 0-154 45-192 110 19 1 36 7 51 15 31-45 83-75 142-75 5 0 9 0 14 1 0 29 15 59 42 74 41 24 93 10 116-30 22-41 9-93-32-116z m-424 244c0 44 34 80 77 85 4 9 8 18 13 27 41 71 115 111 191 111-8-16-12-33-12-50-55-5-106-35-135-86-3-4-5-8-7-13 26-14 43-42 43-73 0-47-39-85-85-85-46-1-85 37-85 84z m424 244c39-21 53-69 35-107 6-9 12-17 17-26 41-71 38-155 1-221-10 15-23 27-38 36 24 49 23 110-6 161-3 4-5 8-8 12-25-15-58-16-85-1-41 24-55 75-31 116 23 40 74 54 115 30z" transform="scale(0.19)"></path></svg>
+            </div>
+            <h3>Share The Story</h3>
+            <p>
+              Spread the unique story about your home with friends & family.
+            </p>
+          </div>
+      </div>
+  </div>
+  <hero-bottom-component *ngIf="!isMyHouseKitHome && geoData" [buttonTitle]="heroButtonTitle" [buttonWidth]="heroButtonWidth" [buttonIcon]="heroButtonIcon" [cityLocation]="geoData.cityUrl" [stateLocation]="geoData.stateUrl" [cityName]="geoData.cityNameDisplay" [stateAPLocation]="geoData.stateNameDisplay" [geoData]="geoData"></hero-bottom-component>
+
+<Housekit-home-page *ngIf="isMyHouseKitHome"></Housekit-home-page>

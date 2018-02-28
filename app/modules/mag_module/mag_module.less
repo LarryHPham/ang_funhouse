@@ -1,0 +1,92 @@
+.mag_module {
+  .noclick;
+  height: 430px;
+  width:680px;
+  position: relative;
+
+  &_box {
+    display: inline-block;
+    height: 50px;
+    border: 2px solid @white;
+    color: @white;
+    background-color: @black;
+    padding: 0 18px;
+    line-height: 46px;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-family: @globalFont;
+  } // END .mag_module_box
+
+  &_button {
+    position: absolute;
+    right: 40px;
+    top: 200px;
+    color: @white;
+    border: 2px solid @white;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    background-position: center center;
+    background-size: 13px 28px;
+    background-repeat: no-repeat;
+    background-image: url('/app/public/right_arrow.png'), url('/app/public/right_arrow_black.png');
+    cursor: pointer;
+  } // END .mag_module_button
+
+  &_dm {
+    font-size: 28px;
+    color: @white;
+    text-align: left;
+    font-family: @globalFont;
+    &_img {
+      display: inline-block;
+      background-size: cover;
+      width: 32px;
+      height: 25px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: url('/app/public/magazine_icon.png');
+      margin-right: 15px;
+    } // END .mag_module_dm_img
+  } // END .mag_module_dm
+
+  &_line {
+    width: 250px;
+    height: 2px;
+    background-color: @white;
+    margin: 22px 0;
+  } // END .mag_module_line
+
+  &_text {
+    font-size: 18px;
+    font-family: @globalFont;
+    color: @white;
+    width: 400px;
+  } // END .mag_module_text
+
+  &_title {
+    font-size: 46px;
+    color: @white;
+    text-align: left;
+    font-family: @globalFont;
+    font-weight: bold;
+  } // END .mag_module_title
+
+  .module-wrapper {
+    background-size: cover !important;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    padding: 57px 44px;
+    text-align: left;
+    cursor: pointer;
+
+    &:hover {
+      .mag_module_button {
+        background-color: @white;
+        background-image: url('/app/public/right_arrow_black.png');
+      }
+    }
+  } // END .mag_module .module-wrapper
+}

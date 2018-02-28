@@ -1,0 +1,13 @@
+<section *ngIf="showMagazine" class="module-container">
+  <a [routerLink]="[data.url1, data.param, data.url2]">
+    <div class="mag_banner">
+      <div class="mag_banner_mag"><div class="mag_banner_img"></div></div>
+      <div class="mag_banner_text">
+        Read our Digital Story about <b>{{data.address}}</b>
+      </div>
+      <div class="mag_banner_button">
+        <!-- <i class="fa fa-angle-right"></i> -->
+      </div>
+    </div>
+  </a>
+</section>

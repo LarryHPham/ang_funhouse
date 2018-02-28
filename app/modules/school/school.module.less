@@ -1,0 +1,23 @@
+.school{
+  // height: 736px;
+  &-body{
+    .flexDisplay;
+    .flexDirection(row);
+    padding:15px;
+  }
+  &-tiles{
+    width: 180px;
+    margin-right: 15px;
+    color: @white;
+    &-more{
+      .globalDefaultModFont(14px, 900, @white);
+      background-color: @masterBrandColor;
+      width: 180px;
+      height: 55px;
+      position: absolute;
+      bottom: 37px;
+      text-align: center;
+      line-height: 52px;
+    }
+  }
+}

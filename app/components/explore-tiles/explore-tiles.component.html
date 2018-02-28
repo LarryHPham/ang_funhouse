@@ -1,0 +1,53 @@
+<div class="explore twelve-col">
+    <section class="explore-tiles">
+        <a [routerLink]='["Location-page", {loc: nearByCities[0].city.toLowerCase().replace(" ","-")  + "-" + nearByCities[0].state.toLowerCase()}]'>
+            <div class="explore-tile-1 eight-col">
+                <p class="explore-tile-title">{{nearByCities[0].city}}, {{nearByCities[0].stateAPLocation}}</p>
+                <div class="view-box">
+                    <p class="view-text">View This Area</p>
+                </div>
+            </div>
+        </a>
+        <a [routerLink]='["Location-page", {loc: nearByCities[1].city.toLowerCase().replace(" ","-") + "-" + nearByCities[1].state.toLowerCase()}]'>
+            <div class="explore-tile-2 two-col">
+                <p class="explore-tile-title">{{nearByCities[1].city}}, {{nearByCities[1].stateAPLocation}}</p>
+                <div class="view-box">
+                    <p class="view-text">View This Area</p>
+                </div>
+            </div>
+        </a>
+    </section>
+    <section class="explore-tiles">
+        <div class="explore-tile-3 eight-col">
+            <p class="explore-tile-title-long">
+                <span class="title-bold">Here are 5 of {{nearByCities.citiesCount}}</span><br /> cities within 20<br /> miles of your<br />location
+            </p>
+        </div>
+        <a [routerLink]='["Location-page", {loc: nearByCities[2].city.toLowerCase().replace(" ","-")  + "-" + nearByCities[2].state.toLowerCase()}]'>
+            <div class="explore-tile-4 two-col">
+                <p class="explore-tile-title">{{nearByCities[2].city}}, {{nearByCities[2].stateAPLocation}}</p>
+                <div class="view-box">
+                    <p class="view-text">View This Area</p>
+                </div>
+            </div>
+        </a>
+    </section>
+    <section class="explore-tiles">
+        <a [routerLink]='["Location-page", {loc: nearByCities[3].city.toLowerCase().replace(" ","-")  + "-" + nearByCities[3].state.toLowerCase()}]'>
+            <div class="explore-tile-5 eight-col">
+                <p class="explore-tile-title">{{nearByCities[3].city}}, {{nearByCities[3].stateAPLocation}}</p>
+                <div class="view-box">
+                    <p class="view-text">View This Area</p>
+                </div>
+            </div>
+        </a>
+        <a [routerLink]='["Location-page", {loc: nearByCities[4].city.toLowerCase().replace(" ","-")  + "-" + nearByCities[4].state.toLowerCase()}]'>
+            <div class="explore-tile-6 two-col">
+                <p class="explore-tile-title">{{nearByCities[4].city}}, {{nearByCities[4].stateAPLocation}}</p>
+                <div class="view-box">
+                    <p class="view-text">View This Area</p>
+                </div>
+            </div>
+        </a>
+    </section>
+</div>

@@ -1,0 +1,39 @@
+<section class="list-carousel-header">
+    <span (click)="clickLeft()"><i class="fa fa-angle-left list-circles"></i></span>
+    <span (click)="clickRight()"><i class="fa fa-angle-right list-circles"></i></span>
+    <a *ngIf="cityLocation != 'null'" [routerLink]="['List-page', {viewType: 'list', state: stateLocation, listname: lists[carCount].listTitleOrig, city: cityLocation, page: 1}]">
+        <div class="list-img">
+            <image-180 [hasSubImg]="main_hasSubImg" [imageURL]="lists[carCount].listData[0].photo"></image-180>
+        </div>
+    </a>
+    <a *ngIf="cityLocation == 'null'" [routerLink]="['List-page-state', {viewType: 'list', state: stateLocation, listname: lists[carCount].listTitleOrig, page: 1}]">
+        <div class="list-img">
+            <image-180 [hasSubImg]="main_hasSubImg" [imageURL]="lists[carCount].listData[0].photo"></image-180>
+        </div>
+    </a>
+    <div class="list-heading">
+        <div class="list-heading-details">
+            <div class="list-heading-details-icon"><i class="{{icon}}"></i></div>
+            <div class="list-heading-details-title">{{lists[carCount].listTitle}}</div>
+        </div>
+        <div class="list-heading-description">There are currently {{lists[carCount].listData[0].totalListings}} listings in this category.</div>
+    </div>
+</section>
+<div class="list-carousel-footer">
+    <div class="left">
+        <p>Interested in discovering more?</p>
+        <p class="list-updated">Profile Last Updated On: 03/14/2016</p>
+    </div>
+    <div class="right">
+        <a *ngIf="cityLocation != 'null'" [routerLink]="['List-page', {viewType: 'list', state: stateLocation, listname: lists[carCount].listTitleOrig, city: cityLocation, page: 1}]" class='list-page-button'>
+            <span></span>
+            <span>See The List</span>
+            <i class='fa fa-angle-right'></i>
+        </a>
+        <a *ngIf="cityLocation == 'null'" [routerLink]="['List-page-state', {viewType: 'list', state: stateLocation, listname: lists[carCount].listTitleOrig, page: 1}]" class='list-page-button'>
+            <span></span>
+            <span>See The List</span>
+            <i class='fa fa-angle-right'></i>
+        </a>
+    </div>
+</div>

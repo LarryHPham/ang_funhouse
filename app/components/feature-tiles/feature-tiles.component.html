@@ -1,0 +1,35 @@
+<div class="feature twelve-col">
+    <section class="feature-tiles">
+        <a [routerLink]="['List-page', {viewType: 'map', listname: 'listings-most-recent', state: stateLocation, city: cityLocation, page: 1}]">
+            <div class="feature-tile-1 eight-col">
+                <p class="feature-tile-title">Interactive Local Map</p>
+                <div class="view-box">
+                    <p class="view-text">View This Page</p>
+                </div>
+            </div>
+        </a>
+        <a [routerLink]="['Location-page', {loc: location}]">
+            <div class="feature-tile-2 two-col">
+                <p class="feature-tile-title-long"><span class="title-bold">Dive Deep Into</span><br /> {{cityName}}</p>
+            </div>
+        </a>
+    </section>
+    <section class="feature-tiles">
+        <a [routerLink]="['City-view-page', {state: stateLocation, city: cityLocation}]">
+            <div class="feature-tile-3 two-col">
+                <p class="feature-tile-title">Cities Nearby</p>
+                <div class="view-box">
+                    <p class="view-text">View This Page</p>
+                </div>
+            </div>
+        </a>
+        <a [routerLink]="['List-of-lists-page', {state: stateLocation, city: cityLocation}]">
+        <div class="feature-tile-4 eight-col">
+                <p class="feature-tile-title">Top Lists</p>
+                <div class="view-box">
+                    <p class="view-text">View This Page</p>
+                </div>
+            </div>
+        </a>
+    </section>
+</div>

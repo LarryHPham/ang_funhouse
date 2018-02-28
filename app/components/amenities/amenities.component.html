@@ -1,0 +1,57 @@
+<!--Amenities info Component -->
+<section class="ac">
+    <!--Carousel Box-->
+    <div class="ac-carousel">
+        <!--Carousel Heading and Lising Name-->
+        <div class="ac-carousel-heading">
+            <div>{{list_data.header}}</div>
+            <div><i class="fa fa-map-marker"></i><span> {{list_data.name}}</span></div>
+        </div>
+        <!--Image Placeholder and Carousel Buttons for Next and Previous-->
+        <carousel-button (scrollLeft)="left()" (scrollRight)="right()"></carousel-button>
+          <image-150
+            [imageURL]="list_data.imageUrl"
+            [hasHoverNoSubImg]="list_data.hasHoverNoSubImg"
+            [hasSubImg]="main_hasSubImg"
+            [originalUrl]="list_data.originalUrl"
+            [viewLocationText]="imageLocationText"></image-150>
+        <!--Establishment, Address, Location-->
+        <div class="ac-carousel-est">
+            <div class="ac-carousel-est-first">{{list_data.establishment}}</div>
+            <div><span>{{list_data.address}}</span> <span>{{list_data.location}}</span></div>
+        </div>
+        <!--Button to See The List-->
+        <a [routerLink]="[list_data.url, list_data.paramOptions]" class='mod-page-btn'>
+            <span></span>
+            <span>See The List</span>
+            <i class='fa fa-angle-right'></i>
+        </a>
+    </div>
+    <!--<div class="ac-view"><i class="fa fa-caret-down"></i></div>-->
+    <!--Amenities Lists-->
+    <div class="ac-lists">
+        <!--Single List Category for Amenities-->
+        <div *ngFor="#list_data of list_data.listView" class="ac-lists-list">
+            <div class="ac-lists-list-icon">
+                <i class="fa {{list_data.icons}}"></i>
+            </div>
+            <div class="ac-lists-list-cat">
+                <div>{{list_data.category}}</div>
+                <div>{{list_data.count}}</div>
+            </div>
+            <a [routerLink]="[list_data.url, list_data.paramOptions]" class="ac-lists-list-view">
+                <span>{{list_data.viewMore}}</span>
+                <i class="fa fa-angle-right"></i>
+            </a>
+        </div>
+
+    </div>
+    <!--Footer Button to See All Amenities-->
+    <div *ngIf="hasFooterButton" class="footer">
+        <a [routerLink]="[list_data.url, list_data.paramOptions]" class='footer-btn'>
+            <span></span>
+            <span>See All Amenities</span>
+            <i class='fa fa-angle-right'></i>
+        </a>
+    </div>
+</section>

@@ -1,0 +1,62 @@
+@backgroundColor: rgba(0, 0, 0, 0.75);
+.carlv{
+  width: 680px;
+  height: 360px;
+  position: relative;
+  &-heading{
+    background-color: @backgroundColor;
+    height: 35px;
+    width: 100%;
+    .globalDefaultModFont(16px, 900, @white);
+    line-height: 32px;
+    padding-left: 16px;
+    transform: scaleX(1.0018); /* width and height properties ommitted due to transform */
+  }
+  &-plcholder{
+    height: 325px;
+    width: 100%;
+    position: relative;
+    &-img{
+      height: 325px;
+      width: 100%;
+      position: absolute;
+    }
+    &-details{
+      background-color: @backgroundColor;
+      width: 100%;
+      height: 76px;
+      bottom: 0;
+      padding-left: 20px;
+      padding-top: 12px;
+      position: absolute;
+      div:first-child{
+        .globalDefaultModFont(28px, 700, @white);
+        width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 32px;
+      }
+      div:nth-child(2){
+        .globalDefaultModFont(18px, 400, @white);
+        width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 22px;
+       a{
+         color:@white;
+         &:hover{
+           color:@masterBrandColor;
+         }
+       }
+      }
+    }
+  }
+  &-button{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
+
+}

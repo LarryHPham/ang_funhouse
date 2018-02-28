@@ -1,0 +1,59 @@
+<div class="mag_container mag_container_left">
+    <span *ngIf="length > 0">
+    <div *ngIf="length > 0" class="mag_po_mainimg">
+        <img src="{{magOverview?.photos[counter]}}" class="mag_po_mainimg" id="{{counter}}"/>
+        <span class="fa fa-angle-left mag_po_mainimg_nav" (click)="prevClick()"></span>
+        <span class="fa fa-angle-right mag_po_mainimg_nav" (click)="nextClick()"></span>
+        <div class="mag_po_info">
+            <div class="mag_po_info_label">HOME GALLERY</div>
+            <div class="mag_po_info_address">{{magOverview?.address?.fullStreetAddress}} |
+                {{magOverview?.address?.city}},
+                {{magOverview?.address?.state}} {{magOverview?.address?.zipcode}}
+            </div>
+        </div>
+    </div>
+        </span>
+    <div *ngIf="length == 0" class="mag_po_mainimg"
+         style="background-image: url('app/public/no_photo_images/Joyfulhome-Magazine_Image-Placeholder_No-Image.jpg')">
+        <span class="fa fa-angle-left mag_po_mainimg_nav" (click)="prevClick()"></span>
+        <span class="fa fa-angle-right mag_po_mainimg_nav" (click)="nextClick()"></span>
+        <div class="mag_po_info">
+            <div class="mag_po_info_label">HOME GALLERY</div>
+            <div class="mag_po_info_address">{{magOverview?.address?.fullStreetAddress}} |
+                {{magOverview?.address?.city}},
+                {{magOverview?.address?.state}} {{magOverview?.address?.zipcode}}
+            </div>
+        </div>
+    </div>
+    <div *ngIf="length > 2" class="mag_po_subimg">
+        <img class="mag_po_subimg_item" src="{{magOverview?.photos[left]}}" (click)="changeClick(counter-1)"
+             id="{{left}}"/>
+        <img class="mag_po_subimg_item highlightImage" src="{{magOverview?.photos[counter]}}"
+             (click)="changeClick(counter)" id="{{counter}}"/>
+        <img class="mag_po_subimg_item" src="{{magOverview?.photos[right]}}" (click)="changeClick(counter+1)"
+             id="{{right}}"/>
+    </div>
+    <div *ngIf="length == 2" class="mag_po_subimg">
+        <img class="mag_po_subimg_item highlightImage" src="{{magOverview?.photos[counter]}}"
+             (click)="changeClick(counter)" id="{{counter}}"/>
+        <img class="mag_po_subimg_item" src="{{magOverview?.photos[right]}}" (click)="changeClick(counter+1)"
+             id="{{right}}"/>
+    </div>
+    <div *ngIf="length == 1" class="mag_po_subimg">
+        <img class="mag_po_subimg_item highlightImage" src="{{magOverview?.photos[counter]}}"
+             (click)="changeClick(counter)" id="{{counter}}"/>
+    </div>
+    <div class="mag_po_imgnav">
+        <div class="mag_po_imgnav_count">
+            Image <span style="font-weight: 900;">{{counter + 1}}</span> of <span style="font-weight: 900;">{{imageLength}}</span><br>
+        </div>
+        <span class="mag_po_imgnav_dots" *ngFor="#images of magOverview?.photos; #i=index">
+            <span *ngIf="i == counter">
+                <i class="fa fa-circle" (click)="changeClick(i)" id="{{i}}"></i>
+            </span>
+            <span *ngIf="i != counter">
+                <i class="fa fa-circle-o" (click)="changeClick(i)" id="{{i}}"></i>
+            </span>
+        </span>
+    </div>
+</div>

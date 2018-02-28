@@ -1,0 +1,470 @@
+a {
+  text-decoration: none;
+  color: @joyfulHomeGreen;
+  &:hover{
+  color: @joyfulHomeGreen-hover;
+  }
+}
+
+.mag {
+  &_container {
+    float: left;
+    width: 50%;
+    position: relative;
+    height: 49.792vw;
+    text-align: center;
+    background-color: @white;
+    top: 75px;
+    &_left {
+      border-right: solid 1px #cacaca;
+    } // END .mag_container_left
+  } // END .mag_container
+
+  &_half {
+    height: 24.896vw;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  } // END .mag_half
+
+  &_learn {
+    display: block;
+    width: 10.42vw;
+    height: 2.6vw;
+    border-radius: 5px;
+    border: none;
+    background-color: @joyfulHomeGreen;
+    color: @white;
+    padding: 0.65vw 0 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+    &_logo {
+      height: 1.3vw;
+      width: 1.3vw;
+      // float: left;
+      position: absolute;
+      top: 0.65vw;
+      left: 1.3vw;
+      // margin: 0 0 0 0.65vw;
+      background-image: @joyfulbutton;
+      background-size: contain !important;
+      background-position: center center !important;
+      background-repeat: no-repeat;
+    } // END .mag_learn
+
+    &_text {
+      font-size: 0.83vw;
+      position: absolute;
+      top: 0.85vw;
+      font-family: @globalFont;
+      font-weight: 900;
+      left: 3.246vw;
+      color: @white;
+    } // END .mag_learn_text
+
+    .fa {
+      line-height: 1.3vw;
+      // float: right;
+      position: absolute;
+      right: 1.3vw;
+      top: 0.65vw;
+      font-size: 0.83vw;
+      color: @white;
+      // margin: 0 0.65vw 0 0;
+    }
+
+    &:hover {
+      background-color: @black;
+    }
+  } // END .mag_learn
+
+  &-line {
+    width: 12vw;
+    height: 5px;
+    background-color: @joyfulHomeGreen;
+    margin-bottom: 0.5vw;
+  } // END .mag-line
+
+  &_overlay {
+    width: 100%;
+    height: 100%;
+    z-index: 55;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0,0,0,0.75);
+
+    &_arrow {
+      background-image: url('../../../public/mag_overlay_arrow.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 9.479vw;
+      height: 6.198vw;
+      position: fixed;
+      top: ~'calc(50vh - 4.5vw)';
+      right: 5vw;
+      z-index: 56;
+    } // END .mag_overlay_arrow
+
+    &_callout {
+      color: @white;
+      font-size: 1.667vw;
+      position: fixed;
+      top: ~'calc(50vh - 8vw)';
+      right: 4.490vw;
+      z-index: 56;
+    } // END .mag_overlay_callout
+  } // END .mag_overlay
+
+  &_nav {
+    width: 100%;
+    height: 2.6vw;
+    background-color: @backgroundGrey;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    top: 75px;
+
+    &_but {
+      //.noclick;
+      width: 3.39vw;
+      height: 6.78vw;
+      background-color: @white;
+      background-color: rgba(256,256,256,0.75);
+      box-shadow: 0 0 20px @joyfulHomeGreen;
+      color: @joyfulHomeGreen;
+      font-size: 3.77vw;
+      text-align: center;
+      cursor: pointer;
+      position: fixed;
+      top: ~'calc(50vh - 3.39vw)';
+      cursor: pointer;
+      z-index: 56;
+
+      &:hover {
+        background-color: @joyfulHomeGreen;
+        color: @white !important;
+      }
+
+      &:active {
+        background-color: @black;
+        color: @white !important;
+      }
+
+      &:focus {
+        color: @joyfulHomeGreen;
+        outline: none;
+      }
+
+      &.fa {
+        line-height: 6.78vw;
+      }
+
+      &.fa-angle-left {
+        left: -10;
+        border-top-right-radius: 3.39vw;
+        border-bottom-right-radius: 3.39vw;
+      }
+
+      &.fa-angle-right {
+        right: 0;
+        border-top-left-radius: 3.39vw;
+        border-bottom-left-radius: 3.39vw;
+      }
+    } // END .mag_nav_but
+
+    &_cont {
+      text-align: center;
+      width: 4.69vw;
+      height: 1vw;
+      font-size: 0.8vw;
+      line-height: 1vw;
+      margin: 1vw auto 0;
+
+      .fa-angle-left {
+        //.noclick;
+        float: left;
+        cursor: pointer;
+        color: @black;
+        line-height: 1vw;
+      }
+
+      .fa-angle-right {
+        //.noclick;
+        float: right;
+        cursor: pointer;
+        color: @black;
+        line-height: 1vw;
+      }
+    } // END .mag_nav_cont
+  } // END .mag_nav
+
+  &_page {
+    position: relative;
+    margin: 0 auto;
+    min-width: 350px;
+    width: 100%;
+    background-color: @white;
+  } // END .mag_page
+
+  &_text {
+    font-family: @globalFont;
+    font-weight: 500;
+    padding: 1vw 1vw 3.39vw;
+    font-size: 1vw;
+    line-height: 1.42857143;
+    text-align: left !important;
+
+    &_small {
+      padding: 1vw 1vw 3.39vw;
+      font-size: 1vw;
+      text-align: left !important;
+    } // END .mag_text_small
+
+    &_ssmall {
+      padding: 1vw 1vw 3.39vw;
+      font-size: 0.9vw;
+      text-align: left !important;
+    } // END .mag_text_ssmall
+  } // END .mag_text
+}
+@media (max-width: 1024px) {
+  .mag {
+    &_container {
+      width: 100%;
+      height: auto;
+    } // END .mag_container
+
+    &_half {
+      height: 47.792vw;
+    } // END .mag_half
+
+    &_learn {
+      width: 20.84vw;
+      height: 5.2vw;
+      border-radius: 2.5px;
+      padding: 1.3vw 0 0;
+
+      &_logo {
+        height: 2.6vw;
+        width: 2.6vw;
+        top: 1.3vw;
+        left: 2.6vw;
+      } // END .mag_learn
+
+      &_text {
+        font-size: 1.66vw;
+        top: 1.6vw;
+        left: 6.492vw;
+      } // END .mag_learn_text
+
+      .fa {
+        line-height: 2.6vw;
+        right: 2.6vw;
+        top: 1.6vw;
+        font-size: 1.66vw;
+      }
+    } // END .mag_learn
+
+    &-line {
+      width: 24vw;
+      margin-bottom: 1vw;
+    } // END .mag-line
+
+    &_nav {
+      height: 5.2vw;
+
+      &_but {
+        width: 6.78vw;
+        height: 13.56vw;
+        font-size: 7.53vw;
+        top: 3.12vw;
+        top: ~'calc(50vh - 6.78vw)';
+
+        &.fa {
+          line-height: 13.56vw;
+        }
+
+        &.fa-angle-left {
+          border-top-right-radius: 6.78vw;
+          border-bottom-right-radius: 6.78vw;
+        }
+
+        &.fa-angle-right {
+          border-top-left-radius: 6.78vw;
+          border-bottom-left-radius: 6.78vw;
+        }
+      } // END .mag_nav_but
+
+      &_cont {
+        width: 9.38vw;
+        height: 2vw;
+        font-size: 1.6vw;
+        line-height: 2vw;
+        margin: 2vw auto 0;
+
+        .fa-angle-left {
+          line-height: 2vw;
+        }
+
+        .fa-angle-right {
+          line-height: 2vw;
+        }
+      } // END .mag_nav_cont
+    } // END .mag_nav
+
+    &_text {
+      padding: 2vw 2vw 5vw;
+      font-size: 18px;
+      height: auto;
+
+      &_small {
+        padding: 2vw 2vw 5vw;
+        font-size: 18px;
+        height: auto;
+      } // END .mag_text_small
+
+      &_ssmall {
+        padding: 2vw 2vw 5vw;
+        font-size: 18px;
+        height: auto;
+      } // END .mag_text_ssmall
+    } // END .mag_text
+  }
+}
+
+@media (max-width: 450px) {
+  .mag {
+    &_container {
+      width: 100%;
+      height: auto;
+      top: 40px;
+    }
+    // END .mag_container
+
+    &_half {
+      height: 167px;
+    }
+    // END .mag_half
+
+    &_learn {
+      width: 73px;
+      height: 18px;
+      border-radius: 2.5px;
+      padding: 5px 0 0;
+
+      &_logo {
+        height: 9px;
+        width: 9px;
+        top: 5px;
+        left: 9px;
+      }
+      // END .mag_learn
+
+      &_text {
+        font-size: 6px;
+        top: 6px;
+        left: 23px;
+      }
+      // END .mag_learn_text
+
+      .fa {
+        line-height: 9px;
+        right: 9px;
+        top: 6px;
+        font-size: 6px;
+      }
+    }
+    // END .mag_learn
+
+    &-line {
+      width: 84px;
+      margin-bottom: 4px;
+    }
+    // END .mag-line
+
+    &_nav {
+      height: 18px;
+      top: 40px;
+
+      &_but {
+        width: 13.56vw;
+        height: 27.12vw;
+        font-size: 15.06vw;
+        top: 3.12vw;
+        top: ~'calc(50vh - 13.56vw)';
+
+        &.fa {
+          line-height: 27.12vw;
+        }
+
+        &.fa-angle-left {
+          border-top-right-radius: 13.56vw;
+          border-bottom-right-radius: 13.56vw;
+        }
+
+        &.fa-angle-right {
+          border-top-left-radius: 13.56vw;
+          border-bottom-left-radius: 13.56vw;
+        }
+
+        &:active {
+          background-color: @joyfulHomeGreen;
+        }
+
+        &:hover {
+          background-color: @white;
+          background-color: rgba(256, 256, 256, 0.75);
+          color: @joyfulHomeGreen !important;
+        }
+      }
+      // END .mag_nav_but
+
+      &_cont {
+        width: 33px;
+        height: 7px;
+        font-size: 6px;
+        line-height: 7px;
+        margin: 7px auto 0;
+
+        .fa-angle-left {
+          line-height: 7px;
+        }
+
+        .fa-angle-right {
+          line-height: 7px;
+        }
+      }
+      // END .mag_nav_cont
+    }
+    // END .mag_nav
+
+    &_page {
+      margin-top: 40px;
+    }
+
+    &_text {
+      padding: 7px 7px 18px;
+      font-size: 18px;
+      height: auto;
+
+      &_small {
+        padding: 7px 7px 18px;
+        font-size: 18px;
+        height: auto;
+      }
+      // END .mag_text_small
+
+      &_ssmall {
+        padding: 7px 7px 18px;
+        font-size: 18px;
+        height: auto;
+      }
+      // END .mag_text_ssmall
+    }
+    // END .mag_text
+  }
+}

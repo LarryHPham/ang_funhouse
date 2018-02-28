@@ -1,0 +1,61 @@
+<div class="content-wrapper">
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            <main>
+                <section *ngIf="locDisplay" class='content-main eight-col'>
+                    <loading-component *ngIf="!profileHeaderData && !isError"></loading-component>
+
+                    <error-component *ngIf="isError"></error-component>
+
+                    <div *ngIf="profileHeaderData && !isError">
+                        <!-- Modules Go Here -->
+
+                        <!-- About Section -->
+                        <headline-component [data]="headlineAbout"></headline-component>
+                        <profile-header *ngIf="profileHeaderData" [profileHeaderData]="profileHeaderData"></profile-header>
+                        <find-your-home-module [locData]="locData"></find-your-home-module>
+
+                        <!--List of List Section-->
+                        <list-of-lists-module *ngIf="lists" [listOfLists]="lists"></list-of-lists-module>
+
+                        <!--Trending Section-->
+                        <trending-homes *ngIf="trendingHomesData && locData" [trendingHomesData]="trendingHomesData" [trending]="trendingFeature" [addressObject]="locData"></trending-homes>
+
+                        <info-list-module *ngIf="recentListingsData && locDisplay" [recentListingsData]="recentListingsData" [locDisplay]="locDisplay"></info-list-module>
+
+                        <!-- Crime Section -->
+                        <headline-component *ngIf="crimeData" [data]="headlineCrime"></headline-component>
+                        <crime-module *ngIf="crimeData" [crimeData]="crimeData" [locData]="locData"></crime-module>
+
+                        <!-- Amenities and School Section -->
+                        <headline-component *ngIf="schoolData || amenitiesData" [data]="headlineSchool"></headline-component>
+                        <school-module *ngIf="schoolData" [schoolData]="schoolData" [locData]="locData"></school-module>
+                        <amenities-module *ngIf="amenitiesData && locData" [amenitiesData]="amenitiesData" [locData]="locData"></amenities-module>
+
+                        <featured-lists-module *ngIf="featuredListData && locData" [featuredListData]="featuredListData" [addressObject]="locData"></featured-lists-module>
+
+                        <!-- Interact Section -->
+                        <headline-component *ngIf="headlineInteract" [data]="headlineInteract"></headline-component>
+
+
+                        <!--Share Module-->
+                        <share-module *ngIf="profileHeaderData" [locData]="profileHeaderData"></share-module>
+                        <!--Like Us On FB Module-->
+                        <section *ngIf="!partnerCheck">
+                          <like-us-module></like-us-module>
+                        </section>
+                        <section *ngIf="!partnerCheck">
+                          <comment-module></comment-module>
+                        </section>
+                        <!--Learn More About Us-->
+                        <about-us-module *ngIf="isChecked" [partnerID]="partnerID"></about-us-module>
+
+                    </div>
+                </section>
+                <div class="four-col">
+                    <widget-module></widget-module>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

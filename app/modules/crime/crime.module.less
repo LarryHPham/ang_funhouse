@@ -1,0 +1,170 @@
+.crime{
+
+  &-stats{
+    width: 400px;
+    display: inline-block;
+
+    &-list{
+      margin: 0px;
+    }
+
+    .text-right{
+      float: right;
+    }
+
+    .text-bold{
+      font-weight: 900;
+    }
+
+    &-header{
+      height: 35px;
+      line-height: 35px;
+      padding: 0px 20px;
+      font-size: 12px;
+      color: @greyUpdate;
+
+      .fa{
+        margin-right: 10px;
+      }
+    }
+
+    &-item{
+      border-top: 1px solid @greyBorder;
+      border-left: 5px solid;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px 0 15px;
+
+      &.crime-assault{
+        border-left-color: #44b244;
+      }
+      &.crime-burglary{
+        border-left-color: #1C31CE;
+      }
+      &.crime-larceny{
+        border-left-color: #FFC600;
+      }
+      &.crime-murder{
+        border-left-color: #FF0101;
+      }
+      &.crime-vehicle{
+        border-left-color: #65398E;
+      }
+      &.crime-other{
+        border-left-color: #898989;
+      }
+    }
+
+  }
+
+  &-pie{
+    height: 235px;
+    width: 280px;
+    float: right;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+
+    #crime-pie{
+      height: 100%;
+      width: 100%;
+    }
+
+    &-image{
+      position: absolute;
+      top: 60px;
+      left: 85px;
+      height: 110px;
+      width: 110px;
+      border-radius: 50%;
+      background-size: contain;
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &-tooltip{
+    position: absolute;
+    bottom: 50px;
+    right: 40px;
+    width: 200px;
+    text-align: center;
+    font-size: 22px;
+
+    .bold{
+      font-weight: 900;
+    }
+  }
+
+  &-list{
+    width: 100%;
+    margin: 0px;
+
+    &-item{
+      width: 100%;
+      height: 70px;
+      border-top: 1px solid @strokeGrey;
+      border-left: 5px solid @highlightGrey;
+      position: relative;
+      font-size: 0px;
+
+      &-img{
+        width: 70px;
+        height: 100%;
+        background-color: @backgroundGrey;
+        display: inline-block;
+        >img{
+          position: relative;
+        }
+        #shooting{
+          top: 23px;
+          left: 17px;
+        }
+        #arrest{
+          top: 21px;
+          left: 23px;
+        }
+        #vandalism{
+          top: 21px;
+          left: 19px;
+        }
+        #theft{
+          top: 19px;
+          left: 22px;
+        }
+      }
+
+      &-text{
+        display: inline-block;
+        vertical-align: top;
+        height: 100%;
+        max-width: 570px;
+        padding: 8px;
+
+        &-title{
+          display: block;
+          margin-bottom: 7px;
+          font-size: 14px;
+        }
+        &-description{
+          font-size: 12px;
+        }
+        &-date{
+          font-size: 10px;
+          color: @greyUpdate;
+        }
+        &-bold{
+          font-weight: 900;
+        }
+      }
+
+      .fa-angle-right{
+        color: @strokeGrey;
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+    }
+  }
+}

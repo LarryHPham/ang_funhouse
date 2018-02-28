@@ -1,0 +1,86 @@
+@import (reference) "./app/global/stylesheets/components.less";
+@import (reference) "./app/global/stylesheets/base.less";
+
+.mag_adzone {
+   background-color: @backgroundGrey;
+}
+
+// Ad sizing
+@media (min-width: 1475px) {
+  .mag_adzone {
+    float: left;
+    height: 250px;
+    width: 300px;
+    margin: 0.5vw 0.5vw 0 0;
+
+    &_r{
+      float: right;
+      margin: 0.5vw 0 0 0.5vw;
+    } // END .mag_adzone_r
+  }
+}
+@media (min-width: 1200px) and (max-width: 1474px) {
+  .mag_adzone {
+    float: left;
+    height: 60px;
+    width: 468px;
+    margin: 0.5vw 0.5vw 0 0;
+
+    &_r{
+      float: right;
+      margin: 0.5vw 0 0 0.5vw;
+    } // END .mag_adzone_r
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .mag_adzone {
+    float: left;
+    height: 250px;
+    width: 300px;
+    margin: 0.5vw 0.5vw 0 0;
+
+    &_r{
+      float: right;
+      margin: 0.5vw 0 0 0.5vw;
+    } // END .mag_adzone_r
+  }
+}
+@media (min-width: 650px) and (max-width: 1023px) {
+  .mag_adzone {
+    float: left;
+    height: 250px;
+    width: 300px;
+    margin: 0.5vw 0.5vw 0 0;
+
+    &_r{
+      float: right;
+      margin: 0.5vw 0 0 0.5vw;
+    } // END .mag_adzone_r
+  }
+}
+@media (min-width: 500px) and (max-width: 649px) {
+  .mag_adzone {
+    float: left;
+    height: 60px;
+    width: 468px;
+    margin: 0.5vw 0.5vw 0 0;
+
+    &_r{
+      float: right;
+      margin: 0.5vw 0 0 0.5vw;
+    } // END .mag_adzone_r
+  }
+}
+@media (min-width: 0) and (max-width: 499px) {
+  .mag_adzone {
+    float: left;
+    height: 250px;
+    width: 300px;
+    margin: 0.5vw 0.5vw 0 0;
+
+    &_r{
+      float: right;
+      margin: 0.5vw 0 0 0.5vw;
+    } // END .mag_adzone_r
+  }
+}

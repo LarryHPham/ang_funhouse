@@ -1,0 +1,148 @@
+@import (reference) "./app/global/stylesheets/components.less";
+@import (reference) "./app/global/stylesheets/base.less";
+
+partnerhomepage {
+.home-tagline {
+  .globalDefaultModFont(32, 900, @black);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+  .thin {
+    .globalDefaultModFont(32, 400, @black);
+  }
+
+  .map-icon {
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+
+ .geo-location {
+   text-align: center;
+   margin-top: -30px;
+   margin-bottom: 30px;
+ }
+
+  .geo-location-test {
+    padding: 5px;
+  }
+
+.page.wrapper {
+  width: 618px;
+  @media @mobile {
+    width: 265px;
+  }
+  @media @desktop-m {
+    width: 735px;
+  }
+  @media @desktop-l {
+    width: 800px;
+  }
+  .inner-wrapper-home {
+      clear: both;
+      display: inline;/* IE double margin fix. Feel free to move this to your IE specific stylesheets. */
+      float: left;
+      padding: 0 0px 0 0px;
+      position: relative;
+      width: 100%;
+    .container-popout {
+      margin-top: -150px;
+      color:white;
+      text-align:center;
+      padding: 0 45px;
+      @media @mobile {
+        margin-top: -70px;
+        padding: 0 15px;
+      }
+      @media @tablet {
+        padding: 0;
+        margin-top: -115px;
+      }
+      @media @desktop-l {
+        margin-top: -205px;
+        width: 999px;
+        margin-left: ~"calc(50% - 500px)";
+      }
+      h3{
+	      font-size: 24px;
+        margin:0 0 5px 0;
+        font-weight: 400;
+        @media @mobile {
+          font-size:14px;
+        }
+      }
+    }
+    .content-highlight {
+      width: 100%;
+    }
+    .segment {
+      width:180px;
+      height:auto;
+      vertical-align: top;
+      text-align: center;
+      display: inline-block;
+      margin-left: 30px;
+      margin-bottom: 10px;
+      @media @mobile {
+        margin-left:40px;
+        width: 240px;
+      }
+      @media @desktop-m {
+        margin-left: 90px;
+      }
+      @media @desktop-l {
+        margin-left: 122px;
+      }
+      h3 {
+        font-size: 24px;
+        margin-bottom:0;
+        margin-top: 15px;
+      }
+      p{
+        margin-top: 5px;
+        font-size: 18px;
+      }
+      &-circle {
+        height: 164px;
+        width: 164px;
+        border: 3px solid @masterBrandColor;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        stroke: @masterBrandColor;
+        fill: @masterBrandColor;
+        svg{
+          margin-top:30px;
+          @media @desktop-m {
+            height: 110px;
+            width: 110px;
+            margin-top: 35px;
+          }
+        }
+        @media @desktop-m {
+          height: 187px;
+          width: 187px;
+        }
+      }
+    }
+    .segment-one {
+      @media @mobile {
+        margin-left:40px;
+      }
+      margin-left: 0;
+    }
+    h2 {
+      width: 100%;
+      text-align: center;
+      display: block;
+      margin-bottom: 40px;
+      font-size: 24px;
+      padding: 0 30px;
+      @media @mobile {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+}

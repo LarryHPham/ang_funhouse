@@ -1,0 +1,78 @@
+<div class="footer-top-bar-wrapper clear">
+    <div class="wrapper">
+        <div [class.inner-wrapper-home]="isHomePage" [class.inner-wrapper]="!isHomePage">
+            <div class="footer-top-bar">
+                <div *ngIf="!isMyHouseKit" class="footer-logo six-col">
+                    <a href="/"><img height="33px" src="/app/public/Joyful-Home_Logo.svg" alt="Joyful Home | A Little Place to Call Home"/></a>
+                </div>
+                <div *ngIf="isMyHouseKit" class="footer-logo six-col">
+                </div>
+                <div class="footer-social six-col">
+                    <ul>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{currentUrl}}" target="_blank"><li><i class="fa fa-facebook "></i></li></a>
+                        <a href="https://twitter.com/home?status={{currentUrl}}" target="_blank"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{currentUrl}}" target="_blank"><li><i class="fa fa-linkedin"></i></li></a>
+                        <a href="https://plus.google.com/share?url={{currentUrl}}" target="_blank"> <li><i class="fa fa-google-plus"></i></li></a>
+                        <a href="https://pinterest.com/pin/create/button/?url=&media={{currentUrl}}" target="_blank"><li><i class="fa fa-pinterest-p"></i></li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-bottom-wrapper clear">
+    <div class="wrapper">
+        <div [class.inner-wrapper-home]="isHomePage" [class.inner-wrapper]="!isHomePage">
+            <footer class="footer-bottom">
+                <div class="footer-section-wrapper twelve-col">
+                    <h1>{{title}}</h1>
+                    <section class="footer-section-one">
+                        <ul>
+                            <li>States: </li>
+                            <li *ngFor="#state of states"><a [routerLink]='["Directory-page-state", { state: state.abr, listTitle: listTitle, pageNumber: pageNumber }]'>{{state.name}}</a></li>
+                        </ul>
+                    </section>
+                    <hr />
+                    <section class="footer-section-one">
+                        <ul>
+                            <li>Cities: </li>
+                            <li *ngFor="#city of cities"><a [routerLink]='["Directory-page-city", { state: city.state, city: city.nameUrl,  listTitle: listTitle, pageNumber: pageNumber }]'>{{city.name}}</a></li>
+                            <li><a [routerLink]='["Directory-page", { listTitle: listTitle, pageNumber: pageNumber, allCities: true }]'>More Cities...</a></li>
+                        </ul>
+                    </section>
+                    <hr />
+                    <section class="footer-section-two">
+                        <ul>
+                            <li>You Might Like: </li>
+                            <li><a [routerLink]="['List-of-lists-page', {state: stateLocation, city: cityLocation}]">Trending Lists</a> <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['List-page', {viewType: 'list', state: stateLocation, listname: 'listings-most-recent', city: cityLocation, page: 1}]">Most Recent Listings in your Area</a> <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['List-page', {viewType: 'list', state: stateLocation, listname: 'homes-largest', city: cityLocation, page: 1}]">Largest Homes in your Area</a> <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['List-page', {viewType: 'list', state: stateLocation, listname: 'homes-least-expensive', city: cityLocation, page: 1}]">Least Expensive Homes in your Area</a></li>
+                        </ul>
+                    </section>
+                    <hr />
+                    <section *ngIf="isMyHouseKit" class="footer-section-three">
+                        <ul>
+                            <li class="joyful-link"><a href="http://www.myhousekit.com">Myhousekit.com</a>  <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['Contactus-page']">Advertise with MyHouseKit</a> <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['Contactus-page']">Contact Us</a> <i class="fa fa-caret-right"></i></li><br />
+                            <li><a [routerLink]="['Disclaimer-page']">Terms of Use</a> <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['Aboutus-page']">About Us</a> <i class="fa fa-caret-right"></i></li><br />
+                            <li><a [routerLink]="['Contactus-page']">General Feedback</a></li>
+                        </ul>
+                    </section>
+                    <section *ngIf="!isMyHouseKit" class="footer-section-three">
+                        <ul>
+                            <li class="joyful-link"><a href="http://www.joyfulhome.com">Joyfulhome.com</a>  <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['Contactus-page']">Advertise with Joyful Home</a> <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['Contactus-page']">Contact Us</a> <i class="fa fa-caret-right"></i></li><br />
+                            <li><a [routerLink]="['Disclaimer-page']">Terms of Use</a> <i class="fa fa-caret-right"></i></li>
+                            <li><a [routerLink]="['Aboutus-page']">About Us</a> <i class="fa fa-caret-right"></i></li><br />
+                            <li><a [routerLink]="['Contactus-page']">General Feedback</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </footer>
+        </div>
+    </div>
+</div>

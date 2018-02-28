@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="hero-search 8-col">
+        <div id="hero-search-full-container">
+            <form (ngSubmit)="onSubmit($event)" [class.active]="showResults">
+                <input autocomplete="off" type="text" (focus)="focusResults($event)" (blur)="blurResults($event)" [ngFormControl]="term" placeholder="{{placeholder}}">
+                <button type="submit" [class.active]="showResults" class="hero-search-button fa fa-search"></button>
+            </form>
+            <search-results (mousedown)="preventBlur()" [showResults]="showResults" [searchResults]="searchResults" [term]="term"></search-results>
+            <div class="searchMls">*Houses must have an active MLS to appear in search.</div>
+        </div>
+    </div>
+</div>
+<div class="mlsError-overlay" *ngIf="mlsError">
+  <div class="mlsError-modal">
+    <div class="close-modal" (click)="mlsError = false">x</div>
+    <div class="mlsError-message">
+      <div class="background-icon">
+        <svg viewBox="0 0 100 100"><path d="m333 343c-8 0-15 7-15 15 0 9 7 15 15 15 8 0 15-6 15-15 0-8-7-15-15-15z m0-90c-7 0-13 6-13 13l0 57c0 7 6 13 13 13 7 0 13-6 13-13l0-57c-1-7-7-13-13-13z m0-7c37 0 67 29 67 67 0 37-29 67-67 67-37 0-67-30-67-67 0-37 30-67 67-67z m-102-123c26 0 46 20 46 46 0 26-20 47-46 47-26 0-47-21-47-47 0-26 21-46 47-46z m0-31c-43 0-77 35-77 77 0 41 34 77 77 77 42 0 76-35 76-77 0-41-35-77-76-77z m-1-36c62 0 113 50 113 113 0 13-5 33-10 45l-3 6c-49 1-90 41-90 92 0 22 8 42 21 57l-31 65-103-220c-5-12-10-32-10-45 0-63 51-113 113-113z m0-30c-79 0-143 64-143 143 0 19 4 41 11 57 39 84 79 168 118 252 2 5 8 9 13 9 6 0 12-4 14-9 14-29 27-58 41-87 14 8 30 14 48 14 50 0 92-42 92-92 0-41-26-75-62-88 6-16 11-37 11-56 1-79-64-143-143-143z" transform="scale(0.19)"></path></svg>
+      </div>
+      <h2>The address you entered does not have an active MLS.</h2>
+      <p>Please check your address and try again.  If the error continues to occur, please contact your real estate agent.</p>
+    </div>
+    <div class="mlsError-nhfs">
+      <h2><i class="fa fa-map-marker"></i>Nearby Houses For Sale</h2>
+      <span class="display-radius"><i class="fa fa-map-marker"></i>Showing homes within a <b>10mi radius</b></span>
+      <hr>
+      <ul class="leftColumn">
+        <li *ngFor="#item of mlsNearbyColumn1"><a [routerLink]="['../../Magazine', {addr: item.addressKey}]">{{item.fullStreetAddress + " " + item.loc + " " + item.postalCode}}</a></li>
+      </ul>
+      <ul class="rightColumn">
+        <li *ngFor="#item of mlsNearbyColumn2"><a [routerLink]="['../../Magazine', {addr: item.addressKey}]">{{item.fullStreetAddress + " " + item.loc + " " + item.postalCode}}</a></li>
+      </ul>
+      <div class="button-nearby"><a [routerLink]="['List-page', {viewType: 'list', state: stateLocation, listname: 'homes-largest', city: cityLocation, page: 1}]">See All Nearby Homes For Sale</a></div>
+    </div>
+  </div>
+</div>

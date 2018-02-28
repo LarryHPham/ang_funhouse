@@ -1,0 +1,14 @@
+<ul *ngIf="searchResults && showResults" class="search-results">
+    <div class="caret-top" [class.active]="firstItemHover == 0"></div>
+    <!-- <i (click)="closeResults($event)" class="fa fa-times search-results-close"></i> -->
+    <a *ngFor = "#item of searchResults; #i = index" (mouseover)="firstItemHover = i" (mouseout)="firstItemHover = i" [routerLink]="[item.page, item.params]" (click)="closeResults($event)">
+        <li id ="result-item">
+            {{item.title}}
+        </li>
+        <i class="fa fa-arrow-right"></i>
+    </a>
+    <div class="button-similar" *ngIf="!noResultsFound"><a (click)="relatedResults($event)">See Similar Results</a></div>
+    <div *ngIf="noResultsFound" class="search-results-no-results">
+        No Results Found
+    </div>
+</ul>

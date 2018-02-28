@@ -1,0 +1,36 @@
+<div class="info-list {{infoList.bgClass}}">
+    <div class='info-imagebox'>
+      <div class="info-rank">#{{infoList.counter}}</div>
+        <a [routerLink]="['../../Magazine', {addr: infoList.addressKey}, 'PropertyOverview' ]">
+            <img src='{{infoList.photos[0]}}' onerror="this.src='/app/public/placeholder-location.jpg';" />
+            <div>
+              <p>View</p>
+              <p>Profile</p>
+            </div>
+        </a>
+    </div>
+    <div class="info-content-box">
+        <div class="info-content-row-wrapper">
+            <div class="info-content-row1">
+                <span class="info-location"><i class="fa fa-map-marker"></i>{{infoList.city}}, {{infoList.stateOrProvince}} {{infoList.postalCode}} | {{infoList.livingArea}}</span>
+                <p class="info-address">{{infoList.fullStreetAddress}}</p>
+                <p class="info-type">{{infoList.propertySubType}} - {{infoList.numBedrooms}} Bed - {{infoList.numBathrooms}} Bath</p>
+            </div>
+            <div class="info-content-row2">
+                <p class="info-market">{{infoList.valTitle}}</p>
+                <p class="info-date">{{infoList.listingDate}}</p>
+                <p class="info-price">Asking Price: ${{infoList.listPrice}}</p>
+            </div>
+        </div>
+        <div class="info-content-bottom {{infoList.bgClass}}">
+            <div class='info-content-subbox'>
+                <p>Want more information about this listing?</p>
+            </div>
+            <a [routerLink]="['../../Magazine', {addr: infoList.addressKey}, 'PropertyOverview' ]" class='info-list-button'>
+                <span></span>
+                <span>{{infoList.buttonName}}</span>
+                <i class='fa fa-angle-right'></i>
+            </a>
+        </div>
+    </div>
+</div>

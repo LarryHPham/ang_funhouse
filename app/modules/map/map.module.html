@@ -1,0 +1,5 @@
+<section class="module-container">
+    <module-header [module_title]="moduleTitle"></module-header>
+    <!--<div id="map-module" class="map-container"></div>-->
+    <map-component *ngIf="mapData" [mapData]="mapData"></map-component>
+</section>

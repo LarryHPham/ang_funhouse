@@ -1,0 +1,27 @@
+<div class="overview-page">
+    <magazine-carousel-module [magOverview]="magOverview"></magazine-carousel-module>
+    <div class="mag_container mag_text" (window:resize)="onResize($event)">
+        <div class='mag_po_address'>
+            <i class='fa fa-map-marker'></i>
+            {{magOverview?.address?.fullStreetAddress}}
+        </div>
+        <div *ngIf="magOverview?.address" class='mag_po_loc'>
+            {{magOverview?.address?.city}}, {{magOverview?.address?.state}} {{magOverview?.address?.postalCode}} {{magOverview?.address?.county}}
+            {{magOverview?.address?.country}}
+        </div>
+        <span *ngIf="price">
+            <div *ngIf="magOverview?.address" class='mag_po_price'>Listed for: {{price}}</div>
+        </span>
+        <span *ngIf="contactAgent">
+            <div *ngIf="magOverview?.address" class='mag_po_price'>
+                Listed for: <span [innerHTML]="contactAgent" ></span>
+            </div>
+        </span>
+        <div class='mag-line'></div>
+            <span *ngFor="#p of magOverview?.content; #i=index">
+                <adzone-component *ngIf="i === 2" style="float: left; margin-right: 10px"></adzone-component>
+                <span [innerHTML]="p"></span><br><br>
+            </span>
+        <learnmore-component></learnmore-component>
+    </div>
+</div>

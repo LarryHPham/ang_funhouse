@@ -1,0 +1,31 @@
+<div class="mag_container">
+    <div class="mag_container_left">
+        <img class="mag_half"
+             src="app/public/mag_stock_img/food_types/{{magAmenities?.stockPhotos}}_stock_mag.jpg"
+             onerror="this.src='app/public/mag_stock_img/food_types/Food_Stands_stock_mag.jpg';"/>
+    </div>
+    <div class="mag_half mag_text">
+        <div class="banner" style="margin-top: 1vw">Great Local Amenities</div>
+        <span *ngFor="#p of magAmenities?.content; #i=index">
+            <span *ngIf="i <= 1">
+                <span [innerHTML]="p"></span><br><br>
+            </span>
+        </span>
+    </div>
+</div>
+<div class="mag_container">
+    <div class="mag_half mag_text">
+        <span *ngFor="#p of magAmenities?.content; #i=index">
+            <span *ngIf="i > 1">
+                <adzone-component *ngIf="i === 2" style="float: right;"></adzone-component>
+                <span [innerHTML]="p"></span><br><br>
+                <learnmore-component *ngIf="!$last"></learnmore-component>
+            </span>
+        </span>
+    </div>
+    <div class="mag_container_left">
+        <img class="mag_half"
+             src="app/public/mag_stock_img/food_types/{{magAmenities?.stockPhotos}}_alt_stock_mag.jpg"
+             onerror="this.src='app/public/mag_stock_img/food_types/Food_Stands_alt_stock_mag.jpg';"/>
+    </div>
+</div>

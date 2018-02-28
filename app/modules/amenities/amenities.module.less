@@ -1,0 +1,35 @@
+.amen{
+  //height: 736px;
+  height: 660px;
+  &-body{
+    .flexDisplay;
+    .flexDirection(row);
+    padding:15px;
+  }
+  &-tiles{
+    width: 180px;
+    margin-left: 15px;
+    color: @white;
+    &-scroll{
+      background-color: @masterBrandColor;
+      border: 1px solid @masterBrandColor;
+      margin-bottom: 8px;
+      height: 28px;
+      width: 180px;
+      text-align: center;
+      i{
+        font-size: 24px; /* Approximation due to font substitution */
+        font-weight: 400;
+      }
+    }
+  }
+  &-provider{
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+  }
+}
+#down{
+  position: absolute;
+  bottom: 27px;
+}

@@ -1,0 +1,16 @@
+<section *ngIf="schoolData" class="module-container school">
+    <module-header [module_title]="moduleTitle"></module-header>
+
+    <div class="school-body">
+
+        <div class="school-tiles">
+            <tiles-component [tile_data]="tileData"></tiles-component>
+            <!-- <a href="" class="school-tiles-more">LOAD MORE ...</a> -->
+        </div>
+
+        <div>
+            <amenities-component [hasFooterButton]="hasFooterButton" [list_data]="listData" (scrollLeft)="left()" (scrollRight)="right()"></amenities-component>
+        </div>
+
+    </div>
+</section>

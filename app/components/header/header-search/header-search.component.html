@@ -1,0 +1,10 @@
+<div *ngIf="!isHomePage" class="header-search six-col">
+    <div id="header-search-full-container">
+        <form (ngSubmit)="onSubmit($event)">
+            <input autocomplete="off" type="text" (focus)="focusResults($event)" (blur)="blurResults($event)" [ngFormControl]="term" placeholder="Where do you want to live? (City, ST)"><button class="header-button" type="submit"><i (mousedown)="preventBlur()" class="fa fa-search"></i></button>
+        </form>
+        <search-results (mousedown)="preventBlur()" [showResults]="showResults" [searchResults]="searchResults" [term]="term"></search-results>
+    </div>
+</div>
+<div *ngIf="isHomePage" class="header-search six-col">
+</div>

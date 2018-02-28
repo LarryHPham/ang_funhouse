@@ -1,0 +1,68 @@
+<div class="content-wrapper">
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            <main>
+                <section class='content-main eight-col'>
+                    <loading-component *ngIf="!profileHeaderData && !isError"></loading-component>
+
+                    <error-component *ngIf="isError"></error-component>
+
+                    <div *ngIf="profileHeaderData && !isError">
+                        <!-- Modules Go Here -->
+
+                        <!-- About Section -->
+                        <mag-banner-module *ngIf="addressObject" [listingData]="addressObject"></mag-banner-module>
+                        <headline-component [data]="headlineAbout"></headline-component>
+                        <!--Listing Profile Header-->
+                        <profile-header *ngIf="profileHeaderData" [profileHeaderData]="profileHeaderData"></profile-header>
+
+                        <!--Media Feature Section-->
+                        <media-features-module [trending]="mediaFeature"></media-features-module>
+                        <mag-module *ngIf="addressObject" [listingData]="addressObject"></mag-module>
+                        <!--Map Section-->
+                        <map-module *ngIf="mapData && addressObject" [addressObject]="addressObject" [mapData]="mapData"></map-module>
+
+                        <!-- Crime Section -->
+                        <headline-component *ngIf="crimeData" [data]="headlineCrime"></headline-component>
+                        <crime-module *ngIf="crimeData" [crimeData]="crimeData"></crime-module>
+
+                        <!-- Amenities Section -->
+                        <headline-component *ngIf="amenitiesData" [data]="headlineAmenities"></headline-component>
+                        <amenities-module *ngIf="amenitiesData" [amenitiesData]="amenitiesData" [addressObject]="addressObject"></amenities-module>
+
+                        <!-- Other Homes Section -->
+                        <headline-component *ngIf="trendingHomesData || lists" [data]="headlineOtherHomes"></headline-component>
+
+                        <!--Trending Section-->
+                        <trending-homes *ngIf="trendingHomesData && profileHeaderData && addressObject" [addressObject]="addressObject" [locData]="locData" [trending]="trendingFeature" [trendingHomesData]="trendingHomesData"></trending-homes>
+
+                        <!--List of List Section-->
+                        <list-of-lists-module *ngIf="lists" [listOfLists]="lists"></list-of-lists-module>
+
+                        <!--Feature List Module-->
+                        <featured-lists-module *ngIf="featuredListData && addressObject" [addressObject]="addressObject" [featuredListData]="featuredListData"></featured-lists-module>
+
+                        <!-- Interact Section -->
+                        <headline-component *ngIf="headlineInteract" [data]="headlineInteract"></headline-component>
+
+                        <!--Share Module-->
+                        <share-module *ngIf="profileHeaderData" [locData]="profileHeaderData"></share-module>
+                        <!--Like Us On FB Module-->
+                        <section *ngIf="!partnerCheck">
+                          <like-us-module></like-us-module>
+                        </section>
+                        <!--Comment Section-->
+                        <section *ngIf="!partnerCheck">
+                          <comment-module></comment-module>
+                        </section>
+                        <!--Learn More About Us-->
+                        <about-us-module *ngIf="isChecked" [partnerID]="partnerID"></about-us-module>
+                    </div>
+                </section>
+                <div class="four-col">
+                    <widget-module></widget-module>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,137 @@
+.list-carousel-header{
+  .flexDisplay;
+  background-color: rgba(40, 40, 40, 1);
+  background-repeat: repeat;
+  color: @white;
+  width: 680px;
+  height: 260px;
+  position: relative;
+
+}
+.list-img{
+  margin: 40px 0 auto 75px;
+}
+.list-heading{
+  font-family: @globalFont;
+  &-details{
+    .flexDisplay;
+    margin: 55px 0 10px 10px;
+    &-icon{
+      margin: 0 12px 0 0;
+      border-radius: 50%;
+      background-color: @joyfulHomeGreen;
+      width: 40px;
+      height: 40px;
+      font-size: 22px; /* Approximation due to font substitution */
+      font-weight: 400;
+      line-height: 22px; /* Approximation due to font substitution */
+      text-align: center;
+      padding-top: 9px;
+    }
+    &-title{
+      font: @globalFont;
+      font-size: 22px;
+      font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 375px;
+      height: 50px;
+      margin-top: 5px;
+    }
+  }
+  &-description{
+    border-left: solid #ffffff 3px;
+    font-size: 16px; /* Approximation due to font substitution */
+    font-weight: 400;
+    line-height: 20px; /* Approximation due to font substitution */
+    text-align: left;
+    margin-left: 27px;
+    text-overflow: ellipsis;
+    padding: 0px 45px 0px 12px;
+    height: 113px;
+    width: 375px;
+  }
+}
+
+.list-carousel-footer {
+  background: @black;
+  width: 680px;
+  height: 76px;
+  font-family: @globalFont;
+  color: @white;
+  font-weight: 400;
+  .flexDisplay;
+  p {
+    margin: 0;
+  }
+  .left {
+    .flexJustify(space-between);
+    font-size: 18px;
+    padding: 17px;
+    .list-updated {
+      font-size: 14px;
+    }
+  }
+  .right {
+    .flexJustify(space-between);
+    padding: 17px;
+    margin-left: 185px;
+    float: right;
+  }
+}
+
+@hoverColor: @masterBrandColor;
+.list-circles{
+  font-size: 20px;
+  font-weight: 400;
+  color: @white;
+  cursor: pointer;
+  border: 2px solid @white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding-top: 5px;
+  position: absolute;
+  z-index: 1;
+  margin: 113px 15px;
+  &.fa-angle-right {
+    right: 0;
+  }
+
+  &.fa-angle-left {
+    left: 0;
+  }
+  &:hover{
+    color: @hoverColor;
+    border-color: @hoverColor;
+  }
+}
+
+.list-page-button {
+  .inlineFlexDisplay;
+  .flexDirection(row);
+  .flexAlignItems(center);
+  width: 180px;
+  height: 35px;
+  background-color: @masterBrandColor;
+  .borderRadiusPrefix(5px);
+  span:first-child {
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    //background-image: url('Icon-basketball.png');
+  }
+  span:nth-child(2) {
+    .globalDefaultModFont(14px, 400, @white);
+    margin-left: 10px;
+  }
+  i {
+    margin: 0 10px 0 10px;
+    color: @white;
+    font-weight: 400;
+  }
+  &:hover {
+    background-color: darken(@masterBrandColor, 10%);
+  }
+}

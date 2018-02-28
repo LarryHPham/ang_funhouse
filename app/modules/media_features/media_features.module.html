@@ -1,0 +1,22 @@
+<section *ngIf="propertyData" class="module-container media">
+    <module-header [module_title]="moduleTitle"></module-header>
+    <div style="height:466px; width:100%">
+      <media-images *ngIf="propertyData" [mediaImages] = "propertyData.imageArray" [featureListing]="propertyData.featureListing" (expand)="expandModal()"></media-images>
+    </div>
+    <section class="features">
+        <div class="heading">
+            <span>{{featureHeading}}</span>
+            <span>{{lastUpdate}}</span>
+        </div>
+        <div class="features-info">
+            <ul>
+                <li *ngFor = "#item of propertyData.featureData"> {{item.featureName}}: {{item.featureValue}}</li>
+            </ul>
+        </div>
+    </section>
+</section>
+
+<div class="modal" (keyup)="close($event)" [ngClass]="{'modal-open': expand == true}">
+  <div class="modal-exit" (click)="expandModal()">X</div>
+  <media-images *ngIf="propertyData" [mediaImages] = "propertyData.imageArray" [featureListing]="propertyData.featureListing" [modalButton]="modal" (expand)="expandModal()"></media-images>
+</div>

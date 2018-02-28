@@ -1,0 +1,109 @@
+.ac{
+  border: 1px solid @strokeGrey;
+  width: 455px;
+  // height: 640px;
+  height: 569px;
+  position: relative;
+  &-carousel{
+    width: 100%;
+    height: 356px;
+    text-align: center;
+    .globalDefaultModFont(18px, 900, @white);
+    background-image: url('/app/public/drk-linen.png');
+    background-repeat: repeat;
+    background-color: rgba(75, 75, 75, 0.2);
+    &-heading{
+      padding-top: 19px;
+      margin-bottom: 20px;
+      i{
+        color: @masterBrandColor;
+      }
+      div:first-child{
+        width: 420px;
+        height: 20px;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+      div:nth-child(2){
+        .globalDefaultFont(16px, 400, @white);
+        line-height: 26px;
+      }
+    }
+    &-est{
+      margin: 18px auto 12px auto;
+      width: 400px;
+      height: 42px;
+      overflow: hidden;
+      &-first{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      div:first-child{
+        .globalDefaultModFont(18px, 900, @white);
+      }
+      div:nth-child(2){
+        .globalDefaultFont(14px, 400, @white);
+        line-height: 24px;
+      }
+    }
+  }
+
+  &-lists{
+     height: 212px;
+    &-list{
+      .flexDisplay;
+      height: 70px;
+      width: 100%;
+      border-top: 1px solid @strokeGrey;
+      &-icon{
+        background-color: @backgroundGrey;
+        border-left: 5px solid @strokeGrey;
+        border-bottom: 1px solid @strokeGrey;
+        width: 70px;
+        height: 70px;
+        text-align: center;
+        padding-top: 15px;
+        i{
+          font-size: 40px;
+          font-weight: 400;
+          color: @fontIconGrey;
+        }
+      }
+      &-cat{
+        width: 250px;
+        margin: 18px 0 0 10px;
+        overflow: hidden;
+        div:first-child{
+          .globalDefaultModFont(18px, 400, @black);
+        }
+        div:last-child{
+          line-height: 18px;
+          .globalDefaultModFont(14px, 400, @black);
+        }
+      }
+      &-view{
+        .globalDefaultModFont(22px, 900, @amenitiesGrey);
+        padding-top: 12px;
+        i{
+          padding-left: 25px;
+          padding-top: 2px;
+          font-size: 30px;
+          font-weight: 700;
+          color: @strokeGrey;
+        }
+        &:hover{
+          color: @masterBrandColor;
+          i{
+            color: @masterBrandColor;
+          }
+        }
+      }
+    }
+  }
+  &-provider{
+    font-size: 10px;
+    color: @strokeGrey;
+  }
+}
+//.flexDisplay;

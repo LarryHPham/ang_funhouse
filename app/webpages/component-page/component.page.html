@@ -1,0 +1,238 @@
+<div class="content-wrapper">
+    <div class="wrapper">
+        <div class="inner-wrapper">
+            <main>
+                <section class='content-main eight-col'>
+                    <section class="component-page">
+
+                    <section class='doc-workspace'>
+                        <pagination-footer [paginationParameters]="paginationParameters" (newIndex)="testEvent($event)"></pagination-footer>
+                        <pagination-footer [paginationParameters]="paginationParameters2"></pagination-footer>
+                        <div class='code-wrapper'>
+                     <pre><![CDATA[import {Pagination} from "../../components/pagination-footer/pagination-footer.component";
+                         selector: 'pagination-footer',]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <media-images></media-images>
+                        <div class='code-wrapper'>
+                    <pre><![CDATA[
+              import {MediaImages} from "../../components/media-images/media-images.component";
+              selector: 'media-images',
+                 ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <about-us-module></about-us-module>
+                        <div class='code-wrapper'>
+                  <pre><![CDATA[
+              import {AboutUsModule} from "../../components/about-us-module/about-us-module";
+              selector: 'about-us-module',
+                  ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <share-module></share-module>
+                        <div class='code-wrapper'>
+                  <pre><![CDATA[
+              import {ShareModule} from "../../modules/share/share.module";
+              selector: 'share-module',
+                  ]]></pre>
+                        </div>
+                    </section>
+                    <section class='doc-workspace'>
+                        <comment-module></comment-module>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {CommentModule} from "../../modules/comment/comment.module";
+              selector: 'comment-module',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <backtab-component></backtab-component>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {BackTabComponent} from '../../components/backtab/backtab.component';
+                selector: 'backtab-component',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <title-component></title-component>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {TitleComponent} from '../../components/title/title.component';
+                selector: 'title-component',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <title-loc-component *ngIf="titleLocComponentData"></title-loc-component>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {TitleLocComponent} from '../../components/title/title_loc.component';
+                selector: 'title-loc-component',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <carousel-button></carousel-button>
+                    <section class='doc-workspace'>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {CarouselButton} from '../../components/carousel/carousel.component';
+                selector: 'carousel-button',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <image-180 [hasHover]="hasHover"></image-180>
+                        <image-100 [hasHover]="hasHover"></image-100>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {Image180} from '../../components/images/image-180/image-180.component';
+                selector: 'image-180',
+
+                import {Image100} from '../../components/images/image-100/image-100.component';
+                selector: 'image-100',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <headline-component [data]="headline_example"></headline-component>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {HeadlineComponent} from '../../components/headline/headline.component';
+                selector: 'headline-component',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <div style="width:680px;height:200px;">
+                            <image-header></image-header>
+                        </div>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {imageHeader} from '../../components/image-header/image-header';
+                selector: 'image-header',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <div style="width:680px;height:100px;">
+                            <property-type></property-type>
+                        </div>
+                        <div class='code-wrapper'>
+                        <pre><![CDATA[
+                import {propertyType} from '../../components/property-type/property-type';
+                selector: 'property-type',
+                        ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <div style="width:680px;height:100px;">
+                            <range-slider></range-slider>
+                        </div>
+                        <div class='code-wrapper'>
+                    <pre><![CDATA[
+                import {RangeSlideComponent} from '../../components/range-slider/range-slider';
+                selector: 'range-slider',
+                    ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <profile-header></profile-header>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {ProfileHeader} from '../../modules/profile-header/profile-header';
+              selector: 'profile-header',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <infinity-button></infinity-button>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {InfinityButton} from '../../modules/infinity-button/infinity-button';
+              selector: 'infinity-button',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <div style="position:relative; width:680px;height:570px;background-color:#fff;">
+                            <tiles-component *ngIf="tilesCompData"></tiles-component>
+                        </div>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {TilesComponent} from '../../components/tiles-component/tiles-component';
+              selector: 'tiles-component',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <feature-component></feature-component>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {FeatureComponent} from '../../components/feature-component/feature-component';
+              selector: 'feature-component',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <contentlist *ngIf="contentListData"></contentlist>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {contentList} from "../../components/contentlist/contentlist";
+              selector: 'contentlist',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <module-header></module-header>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {moduleHeader} from "../../components/module-header/module-header";
+              selector: 'module-header',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    <section class='doc-workspace'>
+                        <div style="position:relative; width:680px;height:70px; background-color:#2c2c2c">
+                            <module-footer *ngIf="moduleFooterData"></module-footer>
+                        </div>
+                        <div class='code-wrapper'>
+                      <pre><![CDATA[
+              import {moduleFooter} from "../../components/module-footer/module-footer";
+              selector: 'module-footer',
+                      ]]></pre>
+                        </div>
+                    </section>
+
+                    </section>
+                </section>
+                <div class="four-col">
+                    <widget-module></widget-module>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

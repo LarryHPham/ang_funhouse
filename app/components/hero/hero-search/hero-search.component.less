@@ -1,0 +1,347 @@
+@import (reference) "./app/global/stylesheets/components.less";
+@import (reference) "./app/global/stylesheets/base.less";
+
+.hero-search {
+  margin-top: 25px;
+  text-align: center;
+  @media @mobile {
+    margin-top:0;
+  }
+  @media @tablet {
+    margin-top: 16px;
+  }
+}
+.hero {
+  .hero-search{
+    @media @desktop-l {
+      margin-top: 0;
+    }
+  }
+}
+.hero-search form {
+  display: block;
+  border: solid 2px transparent;
+  border-radius: 8px;
+}
+.hero-search form.active  {
+  border: solid 2px @masterBrandColor;
+}
+.hero-search form:hover {
+  border: solid 2px @masterBrandColor;
+  .hero-search-button {
+    border: 3px solid white;
+  }
+}
+.hero-search input {
+  width: 430px;
+  float: left;
+  height: 50px;
+  color: #999 !important;
+  text-align: left;
+  border: 1px solid #DDDDDD;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-left: 10px;
+  .globalDefaultModFont(18, 400, @black);
+
+  // Glow animation
+  -webkit-transition: box-shadow 0.30s ease-in-out, border 0.30s ease-in-out;
+  -moz-transition: box-shadow 0.30s ease-in-out, border 0.30s ease-in-out;
+  -ms-transition: box-shadow 0.30s ease-in-out, border 0.30s ease-in-out;
+  -o-transition: box-shadow 0.30s ease-in-out, border 0.30s ease-in-out;
+  @media @mobile {
+    width: 220px;
+    height: 40px;
+    font-size: 12px;
+  }
+  @media @tablet {
+    height:60px;
+    width:520px;
+  }
+  &:focus {
+    box-shadow: 0 1px 10px 0 @masterBrandColor;
+    border: 3px solid @white;
+    outline: none;
+  }
+}
+
+
+  .hero-search-button {
+    width: 70px;
+    float: left;
+    height: 50px;
+    background-color: @masterBrandColor;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    @media @mobile {
+      height: 40px;
+    }
+    @media @tablet {
+      height:60px;
+    }
+    .fa-search{
+      font-size: 18px;
+      position: relative;
+      top: -27px;
+      right: 9px;
+    }
+
+    &:focus{
+      outline: none;
+    }
+  }
+  .hero-search-button.active {
+    border: 3px solid white;
+  }
+
+  //Needed id styling to group search input and results dropdown. results dropdown is absolutely bound to this container
+  #hero-search-full-container{
+    position: relative;
+    margin: 0 auto;
+    width: 504px;
+    @media @mobile {
+      width: 294px;
+    }
+    @media @tablet {
+      width: 594px;
+    }
+
+    form {
+      overflow: hidden;
+      margin-bottom:0;
+    }
+    .searchMls {
+      color:#cccccc;
+      width: 100%;
+      text-align: left;
+      font-size: 10px;
+      padding-top:2px;
+	    font-style: italic;
+      @media @tablet {
+        font-size: 12px;
+        padding-top: 4px;
+      }
+    }
+  }
+  .mlsError-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 99999;
+    .mlsError-modal {
+      max-width:800px;
+      width:90%;
+      height: auto;
+      position: absolute;
+      margin: auto;
+      top:75px;
+      right:0;
+      left:0;
+      background-color:@white;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+      border-radius: 3px;
+      @media @mobile {
+        top: 15px;
+      }
+      .close-modal {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        text-align: center;
+        padding: 3px 0;
+        cursor: pointer;
+        z-index: 999;
+        @media @desktop-m {
+          top: -45px;
+          right: -45px;
+          height: 45px;
+          width: 45px;
+          border: 1px solid black;
+          padding: 6px 0;
+          font-size: 25px;
+        }
+      }
+      .close-modal:hover {
+        background-color: @black;
+        color:@white;
+        border-color: @white;
+      }
+      .mlsError-message {
+        padding: 60px 120px;
+        text-align: center;
+        background: linear-gradient(rgba(17, 40, 66, 0.7), rgba(17, 40, 66, 0.7)), url('/app/public/mls-error.png');
+        background-size: cover;
+        background-position: center center;
+        color: @white;
+        position: relative;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        @media @mobile {
+          padding: 15vw 15px;
+        }
+        @media @desktop-m {
+          padding: 60 20px;
+        }
+        h2 {
+          font-size: 30px;
+          @media @mobile {
+            font-size: 20px;
+            margin-top: 0;
+          }
+          .fa {
+            color: #999;
+          }
+        }
+        p {
+          font-size: 18px;
+          @media @mobile {
+            font-size: 14px;
+            margin-bottom:0;
+          }
+          @media @desktop-m {
+            padding: 0 130px;
+          }
+        }
+        .background-icon {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top:0;
+          bottom:0;
+          margin: auto;
+          width: 35vw;
+          height: 35vw;
+          min-height: 145px;
+          min-width: 145px;
+          mix-blend-mode: overlay;
+          z-index: 0;
+          stroke: white;
+          fill:white;
+          fill-opacity: 0.5;
+          @media @tablet {
+            width: 247px;
+            height: 247px;
+          }
+        }
+      }
+      .mlsError-nhfs {
+        @media @mobile {
+          padding: 10px 8px;
+        }
+        @media @tablet {
+          padding: 10px 16px;
+        }
+        @media @desktop-m {
+          padding: 10px 20px;
+        }
+        h2 {
+          display:inline-block;
+          margin: 5px 0;
+          font-weight: 400;
+          i {
+            color: #999;
+            margin-right: 10px;
+          }
+          @media @mobile {
+            font-size: 22px;
+          }
+        }
+        hr {
+          width: ~"calc(100% - 20px)";
+          position: absolute;
+        }
+        .display-radius {
+          float:right;
+          margin-top: 10px;
+          font-size: 12px;
+          color: #999;
+          @media @mobile {
+            margin-top: 16px;
+          }
+          b {
+            color: @black;
+          }
+          .fa {
+            color: @masterBrandColor;
+            margin-right: 5px;
+          }
+        }
+        ul {
+          margin-top:20px;
+          width: 49%;
+          @media @mobile {
+            width:100%;
+          }
+          a {
+            color: #3098ff;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 30px;
+          }
+          a:hover {
+            color: @black;
+          }
+          li {
+            width: 100%;
+            @media @mobile {
+              width:100%;
+            }
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .leftColumn {
+          float: left;
+          @media @mobile {
+            margin-top:10px;
+            padding: 0px 0 0 2px;
+          }
+          @media @tablet {
+            padding: 0px 0 0 9px;
+          }
+          @media @desktop-m {
+            padding: 0px 0 0 10px;
+          }
+        }
+        .rightColumn {
+          float: right;
+          margin-bottom: 15px;
+          padding: 0px 10px 0 0;
+          @media @mobile {
+            display:none;
+          }
+        }
+        .button-nearby {
+          width: 100%;
+          height: 35px;
+          background-color: @masterBrandColor;
+          color: @white;
+          border-radius: 3px;
+          padding: 8px 0;
+          text-align: center;
+          font-weight: 900;
+          margin-top: 10px;
+          clear:both;
+          a {
+            color:white;
+          }
+        }
+        .button-nearby:hover {
+          background-color: @black;
+        }
+      }
+    }
+  }

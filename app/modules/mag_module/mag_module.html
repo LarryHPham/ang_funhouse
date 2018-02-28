@@ -1,0 +1,18 @@
+<div *ngIf="showMagazine" class="mag_module">
+    <module-header [module_title]="module_title"></module-header>
+    <a [routerLink]="[data.url1, data.param, data.url2]">
+        <div class="module-wrapper">
+            <div class="mag_module_dm">
+                <div class="mag_module_dm_img"></div>
+                Digital Story
+            </div>
+            <div class="mag_module_title">Explore This Listing</div>
+            <div class="mag_module_line"></div>
+            <div class="mag_module_box">{{data.address}}</div>
+            <div class="mag_module_text">Get an in-depth, visual look at Listing Details, the Neighborhood, Amenity
+                Recommendations and much more.
+            </div>
+            <div class="mag_module_button"></div>
+        </div>
+    </a>
+</div>

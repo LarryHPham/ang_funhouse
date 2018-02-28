@@ -1,0 +1,398 @@
+@import (reference) "./app/global/stylesheets/components.less";
+@import (reference) "./app/global/stylesheets/base.less";
+
+.highlightImage{
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(68,178,68,1);
+  -moz-box-shadow: 0px 0px 10px 1px rgba(68,178,68,1);
+  box-shadow: 0px 0px 10px 1px rgba(68,178,68,1);
+}
+
+.mag_po {
+  &_address {
+    font-size: 3vw;
+    font-family: @globalFont;
+    margin-bottom: 0.5vw;
+
+    .fa {
+      color: @joyfulHomeGreen;
+      margin-right: 0.3em;
+    }
+
+    &_sm {
+      font-size: 1.5vw !important;
+    }
+  }
+  // END .mag_po_address
+
+  &_imgnav {
+    width: 100%;
+    height: 6.5vw;
+    text-align: center;
+    padding-top: 2vw;
+    color: @black;
+
+    &_count {
+      font-family: @globalFont;
+      font-weight: 400;
+    }
+
+    &_dots {
+
+    }
+    // END .mag_po_imgnav_dots
+
+    .fa-circle-o, .fa-circle {
+      .noclick;
+      color: @joyfulHomeGreen;
+      font-size: 1vw;
+      margin: 0 0.1vw;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    .fa-circle-o {
+      font-size: 0.5vw;
+    }
+  }
+  // END .mag_po_imgnav
+
+  &_info {
+    height: 4.7vw;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    bottom: 0;
+    line-height: 4.7vw;
+
+    &_address {
+      font-size: 1.5vw;
+      font-family: @globalFont;
+      font-weight: 900;
+      color: @white;
+      text-align: left;
+      float: right;
+      width: 32.85vw;
+      height: 4.7vw;
+      line-height: 4.7vw;
+    }
+    // END .mag_po_info_address
+
+    &_label {
+      .noclick;
+      cursor: default;
+      border: solid 1px @white;
+      width: 11.7vw;
+      height: 2vw;
+      line-height: 2vw;
+      font-family: @globalFont;
+      font-weight: 900;
+      font-size: 0.7vw;
+      color: @white;
+      text-align: center;
+      margin-top: 2.5%;
+      // padding: 0.44vw 0 0 0;
+      display: inline-block;
+    }
+    // END .mag_po_info_but
+  }
+  // END .mag_po_info
+
+  &_loc {
+    font-size: 1.5vw;
+    margin-bottom: 0.5vw;
+  }
+  // END .mag_po_loc
+
+  &_mainimg {
+    .noclick;
+    height: 33vw;
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &_nav {
+      .noclick;
+      width: 3vw;
+      height: 3vw;
+      border: solid 2px @white;
+      border-radius: 50%;
+      color: @white;
+      text-align: center;
+      font-size: 2vw;
+      position: relative;
+      margin: 0 1vw;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      top: 12.65vw;
+      line-height: 2.9vw;
+
+      &:hover {
+        background-color: @white;
+        color: @black;
+      }
+
+      &.fa-angle-right {
+        float: right;
+        padding-left: 0.2vw;
+        position: absolute;
+        right: 0;
+      }
+
+      &.fa-angle-left {
+        float: left;
+        padding-right: 0.2vw;
+        position: absolute;
+        left: 0;
+      }
+    }
+    // END .mag_po_mainimg_nav
+  }
+  // END .mag_po_mainimg
+
+  &_price {
+    font-size: 1.5vw;
+    font-family: @globalFont;
+    font-weight: 900;
+    margin-bottom: 0.5vw;
+  }
+  // END .mag_po_price
+
+  &_subimg {
+    // .noclick;
+    display: inline-block;
+    margin: 0 auto;
+    height: 10.2vw;
+    overflow: hidden;
+    text-align: center;
+
+    &_item {
+      .noclick;
+      float: left;
+      width: 16vw;
+      height: 9.9vw;
+      margin: 0.3vw 0.16vw 0;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: inline-block;
+      // float: left;
+      cursor: pointer;
+      //background-color: @strokeGrey;
+    }
+    // END .map_po_subimg_item
+  }
+  // END .map_po_subimg
+}
+
+// END .map_po
+
+@media (max-width: 1024px) {
+  .mag_po {
+    &_address {
+      font-size: 6vw;
+      margin-bottom: 1vw;
+
+      .fa {
+        margin-right: 0.6em;
+      }
+
+      &_sm {
+        font-size: 3vw !important;
+      }
+    }
+    // END .mag_po_address
+
+    &_imgnav {
+      height: 13vw;
+      padding-top: 5.4vw;
+
+      .fa-circle-o, .fa-circle {
+        font-size: 2vw;
+        margin: 0 0.2vw;
+      }
+
+      .fa-circle-o {
+        font-size: 1vw;
+      }
+    }
+    // END .mag_po_imgnav
+
+    &_info {
+      height: 9.4vw;
+      line-height: 9.4vw;
+
+      &_address {
+        font-size: 3vw;
+        width: 65.7vw;
+        height: 9.4vw;
+        line-height: 9.4vw;
+      }
+      // END .mag_po_info_address
+
+      &_label {
+        width: 23.4vw;
+        height: 4vw;
+        line-height: 4vw;
+        font-size: 1.4vw;
+      }
+      // END .mag_po_info_but
+    }
+    // END .mag_po_info
+
+    &_loc {
+      font-size: 3vw;
+      margin-bottom: 1vw;
+    }
+    // END .mag_po_loc
+
+    &_mainimg {
+      height: 66vw;
+
+      &_nav {
+        width: 6vw;
+        height: 6vw;
+        font-size: 4vw;
+        margin: 0 2vw;
+        top: 25.3vw;
+        line-height: 5.8vw;
+
+        &.fa-angle-right {
+          padding-left: 0.4vw;
+        }
+
+        &.fa-angle-left {
+          padding-right: 0.4vw;
+        }
+      }
+      // END .mag_po_mainimg_nav
+    }
+    // END .mag_po_mainimg
+
+    &_price {
+      font-size: 3vw;
+      margin-bottom: 1vw;
+    }
+    // END .mag_po_price
+
+    &_subimg {
+      height: 20.4vw;
+
+      &_item {
+        width: 31vw;
+        height: 19.8vw;
+        margin: 0.6vw 0.32vw 0;
+      }
+      // END .map_po_subimg_item
+    }
+    // END .map_po_subimg
+  }
+
+  // END .map_po
+}
+
+@media (max-width: 450px) {
+  .mag_po {
+    &_address {
+      font-size: 42px;
+      margin-bottom: 4px;
+
+      .fa {
+        margin-right: 0.6em;
+      }
+
+      &_sm {
+        font-size: 11px !important;
+      }
+    }
+    // END .mag_po_address
+
+    &_imgnav {
+      height: 46px;
+      padding-top: 19px;
+
+      .fa-circle-o, .fa-circle {
+        font-size: 7px;
+        margin: 0 1px;
+      }
+
+      .fa-circle-o {
+        font-size: 3px;
+      }
+    }
+    // END .mag_po_imgnav
+
+    &_info {
+      height: 33px;
+      line-height: 33px;
+
+      &_address {
+        font-size: 11px;
+        width: 250px;
+        height: 33px;
+        line-height: 33px;
+      }
+      // END .mag_po_info_address
+
+      &_label {
+        width: 82px;
+        height: 14px;
+        line-height: 14px;
+        font-size: 5px;
+      }
+      // END .mag_po_info_but
+    }
+    // END .mag_po_info
+
+    &_loc {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    // END .mag_po_loc
+
+    &_mainimg {
+      height: 231px;
+
+      &_nav {
+        width: 21px;
+        height: 21px;
+        font-size: 21px;
+        margin: 0 7px;
+        top: 89px;
+        line-height: 20px;
+
+        &.fa-angle-right {
+          padding-left: 1px;
+        }
+
+        &.fa-angle-left {
+          padding-right: 1px;
+        }
+      }
+      // END .mag_po_mainimg_nav
+    }
+    // END .mag_po_mainimg
+
+    &_price {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+    // END .mag_po_price
+
+    &_subimg {
+      height: 71px;
+
+      &_item {
+        width: 109px;
+        height: 69px;
+        margin: 2px 1px 0;
+      }
+      // END .map_po_subimg_item
+    }
+    // END .map_po_subimg
+  }
+
+  // END .map_po
+}

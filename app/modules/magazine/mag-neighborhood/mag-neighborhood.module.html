@@ -1,0 +1,8 @@
+<div class="mag_container mag_container_left mag_text" (window:resize)="onResize($event)">
+    <div class="banner">Explore the Neighborhood</div>
+    <div *ngFor="#p of magNeighborhood?.content; #i=index">
+        <adzone-component *ngIf="i === 2" style="float: left; margin-right: 10px"></adzone-component>
+        <p style="line-height: 1.42857143;" [innerHTML]="p"></p>
+    </div>
+    <learnmore-component></learnmore-component>
+</div>

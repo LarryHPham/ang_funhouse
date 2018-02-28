@@ -1,0 +1,14 @@
+<div class="mag_container">
+    <a [routerLink]="['../../Webpages', 'Profile-page', {address: magContact?.nearby?.key.toLowerCase()}]" >
+        <div class="mag_cont_r">
+            <div class="mag_cont_r_btext">See what else there is to explore down the block</div>
+            <div class="mag_cont_r_line"></div>
+            <div class="mag_cont_r_box">{{magContact?.nearby?.address?.fullStreetAddress}}</div>
+            <div class="mag_cont_r_loc">{{magContact?.nearby?.address?.city}}, {{magContact?.nearby?.address?.state}}
+                {{magContact?.nearby?.address?.zipcode}}<br>United
+                States
+            </div>
+            <div class="mag_cont_r_button noclick"></div>
+        </div>
+    </a>
+</div>

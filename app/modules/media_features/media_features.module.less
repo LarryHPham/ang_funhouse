@@ -1,0 +1,78 @@
+
+.features{
+  width: 680px;
+  &-info{
+    .globalDefaultModFont(14px, 400, @black);
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    ul{
+      list-style: none;
+      width:100%;
+      li{
+        line-height: 25px;
+        font-size: 14px;
+        padding-left: 1.1em;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        width: 33%;
+        text-overflow: ellipsis;
+      }
+      li:before{
+        content: "\2022 ";
+        color: @bulletGrey;
+        padding-right: 0.5em;
+      }
+    }
+  }
+}
+.heading{
+  border-bottom: 1px solid @strokeGrey;
+  height: 43px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  span:first-child{
+    .globalDefaultModFont(18px,400, @black);
+    padding-top: 12px;
+    position: absolute;
+    left: 0px;
+  }
+  span:last-child{
+    .globalDefaultModFont(10px, 700, @greyUpdate);
+    padding-top: 15px;
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.modal-open{
+  display:block !important;
+}
+.modal{
+  width: 1000px;
+  height: 645px;
+  position: fixed;
+  background-color: #000;
+  top: 15%;
+  margin:auto;
+  z-index: 9999;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.8);
+  display: none;
+  &-exit{
+    cursor:pointer;
+    font-family: Arial;
+    font-size: 32px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    position: absolute;
+    top:-50px;
+    right:-50px;
+    background-color: @black;
+    color:@white;
+    text-align: center;
+    line-height: 50px;
+  }
+}

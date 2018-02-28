@@ -1,0 +1,84 @@
+@import (reference) "./app/global/stylesheets/components.less";
+@import (reference) "./app/global/stylesheets/base.less";
+
+.mag_r1 {
+  &_bb {
+    border-bottom: 1px solid #cacaca;
+  }
+  // END .mag_r1_bb
+
+  &_text {
+    font-weight: 500;
+    line-height: 1.3;
+
+    .mag_po_address {
+      font-weight: 900;
+      font-size: 2vw;
+    }
+    // END .mag_r1_text .mag_po_address
+
+    .mag_po_loc {
+      font-size: 1vw;
+    }
+    // END .mag_r1_text .mag_po_loc
+
+    .mag_po_price {
+      font-size: 1vw;
+    }
+    // END .mag_r1_text .mag_po_price
+
+    b {
+      display: none;
+    }
+    // END .mag_r1_text b
+  }
+  // END .mag_r1_text
+}
+
+@media (max-width: 1024px) {
+  .mag_r1 {
+    &_text {
+      font-size: 1.6vw !important;
+
+      .mag_po_address {
+        font-size: 4vw;
+      }
+      // END .mag_r1_text .mag_po_address
+
+      .mag_po_loc {
+        font-size: 2vw;
+      }
+      // END .mag_r1_text .mag_po_loc
+
+      .mag_po_price {
+        font-size: 2vw;
+      }
+      // END .mag_r1_text .mag_po_price
+    }
+    // END .mag_r1_text
+  }
+}
+
+@media (max-width: 350px) {
+  .mag_r1 {
+    &_text {
+      font-size: 6px !important;
+
+      .mag_po_address {
+        font-size: 14px;
+      }
+      // END .mag_r1_text .mag_po_address
+
+      .mag_po_loc {
+        font-size: 7px;
+      }
+      // END .mag_r1_text .mag_po_loc
+
+      .mag_po_price {
+        font-size: 7px;
+      }
+      // END .mag_r1_text .mag_po_price
+    }
+    // END .mag_r1_text
+  }
+}

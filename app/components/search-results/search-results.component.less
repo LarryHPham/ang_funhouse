@@ -1,0 +1,136 @@
+.search{
+  &-results{
+    margin: 0px;
+    min-height: 25px;
+    width: 100%;
+    position: absolute;
+    top: 125%;
+    left: 0px;
+    list-style-type: none;
+    height: auto;
+    background-color: @white;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    z-index: 5;
+    font-size: 18px;
+    text-align: left;
+    font-family: @globalFont;
+    &-close{
+      position: absolute;
+      top: 3px;
+      right: 16px;
+      cursor: pointer;
+    }
+
+    .caret-top{
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      border-bottom: 10px solid #cccccc;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+
+      &::after{
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: -6px;
+        border-bottom: 8px solid @white;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+      }
+    }
+    .caret-top.active::after {
+      border-bottom-color: #ececec;
+    }
+
+    a{
+      width: 100%;
+      padding: 12px 15px 15px 30px;
+      display: block;
+      position: relative;
+      .flexDisplay;
+      .flexJustify(space-between);
+      .flexAlignItems(center);
+      color: @black;
+      li {
+        white-space: nowrap;
+      //  overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      i{
+        font-size: 18px;
+        color: @masterBrandColor;
+        padding-right: 14px;
+        display:none;
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+
+      &:hover{
+        font-weight: 900;
+        color: @black;
+        background-color: #ececec;
+        margin-top: -1px;
+        i {
+          display:inline;
+        }
+      }
+    }
+    a:first-of-type:hover {
+      margin-top: 0;
+    }
+    .button-similar a:after {
+      border-bottom-color: transparent;
+    }
+    a:after {
+      width: 92%;
+      margin-left: 4%;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-bottom: 1px solid @strokeGrey;
+    }
+    a:hover:after {
+      border-color: transparent;
+    }
+    &.active{
+      display: block;
+    }
+    .button-similar {
+      width: 280px;
+      height: 40px;
+      background-color: @masterBrandColor;
+      color: @white;
+      border-radius: 3px;
+      padding:0;
+      text-align: center;
+      font-weight: 900;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: ~"calc(50% - 140px)";
+      a {
+        color:@white;
+        font-weight: 400;
+        padding: 10px 60px 15px 60px;
+        cursor: pointer;
+      }
+      a:hover {
+        color:@white;
+        background-color: transparent;
+      }
+    }
+    .button-similar:hover {
+      background-color: @black;
+    }
+    &-no-results{
+      padding: 0px 15px;
+      height: 25px;
+      line-height: 25px;
+      width: 100%;
+    }
+  }
+}

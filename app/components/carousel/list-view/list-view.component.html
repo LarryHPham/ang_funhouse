@@ -1,0 +1,22 @@
+<section *ngIf="data" class="carlv">
+    <section class="carlv-heading">{{data.heading}}</section>
+    <section class="carlv-plcholder">
+      <circle-button (scrollRight)="right()" (scrollLeft)="left()" ></circle-button>
+      <img src="{{data.image_url}}" class="carlv-plcholder-img" />
+      <div class="carlv-plcholder-details">
+          <div>
+              <span>{{data.listing_price | priceFormat}}</span> | <span>{{data.listing_area}}</span>
+          </div>
+          <div>
+              <span>{{data.listing_addr1}}</span>
+              <i class="fa fa-angle-right"></i>
+              <a [routerLink]="[data.locUrl1, data.locUrl2]"><span>{{data.listing_addr2}}</span></a>
+          </div>
+          <a [routerLink]="[data.url1, data.url2, data.url3]" class='mod-page-btn carlv-button'>
+              <span></span>
+              <span>View Profile</span>
+              <i class='fa fa-angle-right'></i>
+          </a>
+      </div>
+    </section>
+</section>

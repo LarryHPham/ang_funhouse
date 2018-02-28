@@ -1,0 +1,132 @@
+.city-list{
+  width: 680px;
+  height:155px;
+  padding:15px 20px;
+  .flexDirection(row);
+  display: flex;
+  &.odd {
+    background: @backgroundGrey;
+  }
+  &.even {
+    background: @white;
+  }
+  &:last-child {
+    margin-bottom: 20px;
+  }
+  i{
+    color:@masterBrandColor;
+  }
+}
+
+//style for large image box
+.city-imagebox {
+  margin-right:25px;
+  .largeRoundImageLinkWithHover(125px, 2px, @masterStrokeColor);
+  img{
+    position: absolute;
+  }
+  .city-rank {
+    .globalDefaultModFont(14px, 400, @black) !important;
+    text-align: center;
+    color: @white;
+    width: 42px;
+    height: 42px;
+    border: 1px solid @backgroundGrey;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: @white;
+    z-index: 1;
+  }
+}
+
+//styles all the content inside the list start from text to small images
+.city-content-box{
+  display: flex;
+  height:125px;
+  width:76.5%;
+  .flexDirection(column);
+  .flexJustify(space-around);
+  span:first-child{
+    font-size: 14px;
+    & > i{
+      color:@masterBrandColor;
+      padding-right:5px;
+    }
+  }
+
+  .city-content-row-wrapper {
+    display: flex;
+    .flexDirection(row);
+    .flexJustify(space-between);
+  }
+
+  .city-address {
+    .globalDefaultModFont(20px, 900, @black);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .city-type {
+    .globalDefaultModFont(14px, 400, @black);
+    margin-top: 5px;
+    &:hover{
+      color: @masterBrandColor;
+    }
+  }
+
+  .city-content-row2 {
+    text-align: right;
+  }
+
+  .city-market {
+    .globalDefaultModFont(14px, 400, @black);
+    margin: 0;
+  }
+
+  .city-date {
+    .globalDefaultModFont(20px, 900, @black);
+    margin: 0;
+  }
+
+  .city-price {
+    .globalDefaultModFont(14px, 600, @black);
+    margin: 0;
+  }
+
+  .city-content-bottom{
+    .globalDefaultModFont(12px, 400, @white);
+    .flexDirection(column);
+    border: 1px solid @strokeGrey;
+    border-radius: 5px;
+    padding: 3px;
+    p {
+      .globalDefaultModFont(14px, 400, @black);
+      margin-top: 8px;
+      margin-left: 5px;
+      margin-bottom: 0px;
+    }
+    &.odd {
+      background: @white;
+    }
+    &.even {
+      background: @backgroundGrey;
+    }
+  }
+  .city-content-subbox {
+    float:left;
+  }
+  .city-list-button{
+    .mod-page-btn;
+    position: relative;
+    float:right;
+    padding-right: 5px;
+    .city-icon {
+      margin-top: 2px;
+      margin-left: 3px;
+    }
+  }
+}

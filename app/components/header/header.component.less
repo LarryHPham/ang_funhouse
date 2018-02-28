@@ -1,0 +1,118 @@
+//this container holds bother parter header and site header, HTML is in app.webpage
+#header_container {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 999;
+    &.slide-down {
+        transition: top .35s ease-in-out;
+    }
+} //header-container
+
+
+.header-top-bar-wrapper {
+  width: 100%;
+  background-color: #fff;
+  height: 20px;
+  .globalDefaultModFont(10, 400, @black);
+}
+  .header-top-bar {
+    .tagline {
+      margin-top: 5px;
+    }
+    a {
+      color: @black !important;
+    }
+    a:hover {
+      color: @joyfulHomeGreenHover !important;
+    }
+    .directory-link {
+      margin-top: 4px;
+      text-align: right;
+      margin-right: 0 !important;
+      a {
+        cursor: pointer;
+      }
+    }
+    a:hover {
+      color: @joyfulHomeGreenHover;
+    }
+  }
+
+.stick-header {
+  position: fixed;
+  top: 0px !important;
+}
+
+.header-bottom-bar-wrapper {
+  width: 100%;
+  background-color: @masterBrandColor;
+  height: 56px;
+  z-index: 10000 !important;
+}
+.header-margin {
+  // margin-bottom: 20px;
+}
+.header-share {
+  height:56px;
+  width: 56px;
+  position: absolute;
+  right: 0;
+  color:white;
+  padding: 17px;
+  font-size:20px;
+  cursor: pointer;
+}
+.header-share.st_sharethis_large {
+  span {
+    visibility: hidden;
+  }
+}
+.header-share:hover {
+  background-color: darken(@masterBrandColor, 10%);
+}
+  .header-logo {
+    width: 203px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  .logo-left {
+    margin-left: 0 !important;
+  }
+  .logo-icon {
+      width: 34px;
+  }
+.directory-dropdown-wrapper {
+  min-height: 30px;
+  max-height: 240px;
+  width: 240px;
+  overflow-x: auto;
+  position: absolute;
+  z-index: 100;
+  top: 25px;
+  right: 0;
+  border: 1px solid @greyBorder;
+  ul {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  li {
+    height: 30px;
+    width: auto;
+    line-height: 30px;
+    padding: 0 10px 0 15px;
+    color: #000000;
+    background-color: #ffffff;
+    cursor: pointer;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    .fa {
+      margin-right: 10px;
+    }
+    &:hover {
+      color: #ffffff;
+      background-color: @joyfulHomeGreen;
+    }
+  }
+}

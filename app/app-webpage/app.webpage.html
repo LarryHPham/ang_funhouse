@@ -1,0 +1,17 @@
+<div id="header_container"
+    [style.top]="headerAdjustment"
+    [ngClass]="{'slide-up': scrollMenuUp, 'slide-down': !scrollMenuUp}"
+    (window:scroll)="onScroll($event)">
+    <div id="partner" *ngIf="partnerScript" style="position: relative; z-index: 1000;" [style.height]="iframeMaxHeight" [innerHTML]="partnerScript"></div>
+    <div class=webpage-home>
+      <header-component [partnerID]="partnerID"></header-component>
+    </div>
+</div>
+
+<div class="container" style="min-height: 900px;" [style.padding-top]="scrollPadding">
+    <router-outlet></router-outlet>
+</div>
+
+<div class=webpage-home>
+  <footer-component *ngIf="geoData" [partnerID]="partnerID" [geoData]="geoData"></footer-component>
+</div>

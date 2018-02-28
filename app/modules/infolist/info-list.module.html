@@ -1,0 +1,7 @@
+<section class="module-container">
+    <module-header [module_title]="module_title"></module-header>
+    <span *ngFor="#infoList of infoList">
+        <info-list [infoList]="infoList"></info-list>
+    </span>
+    <pagination-footer *ngIf="paginationParameters" [paginationParameters]="paginationParameters" (newIndex)="newIndex($event)"></pagination-footer>
+</section>

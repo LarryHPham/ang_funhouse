@@ -1,0 +1,23 @@
+<div class="mag_container mag_container_left">
+    <div class="mag_text">
+        <div class="banner" style="margin-top: 1vw">Contact The Agent</div>
+        <div class="mag_po_address mag_po_address_sm"><i class="fa fa-map-marker"></i>{{magContact?.address?.fullStreetAddress}}
+        </div>
+        <span *ngFor="#p of magContact?.content">
+            <span [innerHTML]="p"></span><br><br>
+        </span>
+        <contact-component [magContact]="magContact"></contact-component>
+    </div>
+    <span *ngFor="#contactImg of magContact?.photos; #i=index">
+        <span *ngIf="i === 0">
+        <div class="mag_n1_img">
+            <img src="{{contactImg}}" class="mag_n1_img"/>
+            <div class="mag_n1_img_overlay">
+                <div class="mag_n1_img_text">{{magContact?.address?.fullStreetAddress}}</div>
+            </div>
+        </div>
+        </span>
+    </span>
+</div>
+<magazine-contact-module [magContact]="magContact"></magazine-contact-module>
+

@@ -1,0 +1,10 @@
+<!--/**-->
+<!--* Created by Christopher Lynch on 2/23/2016.-->
+<!--*/-->
+<span *ngIf="toc">
+    <a *ngFor="#item of toc" id="{{item.routeName}}" [routerLink]="['Magazine', {addr: address}, item.routeName ]" class="magheader_but" [class.active]="item === selectedItem" (click)="selectItem( item )">
+        {{item.label}}
+        <div *ngIf="item.label != 'Amenities'" class="magheader_but_bottom"></div>
+        <div *ngIf="item.label == 'Amenities'" class="magheader_but_bottom" style="left: -13px;"></div>
+    </a>
+</span>

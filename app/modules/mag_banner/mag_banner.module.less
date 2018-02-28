@@ -1,0 +1,73 @@
+.mag_banner {
+  height: 100px;
+  width: 680px;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: url('/app/public/mag_banner.png'), @strokeGrey;
+
+  &_button {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 64px;
+    height: 64px;
+    border: 2px solid @white;
+    border-radius: 50%;
+    color: @white;
+    float: right;
+    background-position: center center;
+    background-size: 13px 28px;
+    background-repeat: no-repeat;
+    background-image: url('/app/public/right_arrow.png'), url('/app/public/right_arrow_black.png');
+  } // END .mag_banner_button
+
+  &_img {
+    height: 49px;
+    width: 63px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url('/app/public/magazine_icon.png');
+  } // END .mag_banner_img
+
+  &_mag {
+    width: 100px;
+    height: 100px;
+    background-color: @masterBrandColor;
+    text-align: center;
+    padding: 22px 0 0 26px;
+    float: left;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      left: 100px;
+      border-left: 35px solid @masterBrandColor;
+      border-bottom: 50px solid transparent;
+      border-top: 50px solid transparent;
+    }
+  } // END .mag_banner_mag
+
+  &_text {
+    font-size: 18px;
+    font-family: @globalFont;
+    color: @white;
+    text-align: left;
+    margin: 26px 0 0 53px;
+    width: 400px;
+    float: left;
+
+    b {
+      font-family: @globalFont;
+      font-weight: bold;
+    }
+  } // END .mag_banner_text
+
+  &:hover .mag_banner_button {
+    background-color: @white;
+    background-image: url('/app/public/right_arrow_black.png');
+  }
+}

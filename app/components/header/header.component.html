@@ -1,0 +1,20 @@
+<div *ngIf="!isMyHouseKit || !isHomePage" [class.header-margin]="!isHomePage" class="header-bottom-bar-wrapper">
+    <div class="wrapper">
+        <div [class.inner-wrapper-home]="isHomePage" [class.inner-wrapper]="!isHomePage">
+            <div id="header_bottom" class="header-bottom-bar">
+                <div *ngIf="!isMyHouseKit" class="header-logo" [class.logo-left]="!isHomePage">
+                    <a href="/"><img height="36px" src="/app/public/Joyful-Home_Logo_All-White-Outlined.svg" alt="Joyful Home | A Little Place to Call Home"/></a>
+                </div>
+                <div *ngIf="isMyHouseKit" class="header-logo six-col" style="font-size:20px;font-family:'Lato'; line-height:24px;">
+                  <a href="{{partnerUrl}}" style="color:#fff"><img height="36px" src="/app/public/icons/joyful-home-icon-all-white-outlined.svg" /></a>
+                </div>
+                <header-search-component [isHomePage]="isHomePage"></header-search-component>
+            </div>
+        </div>
+    </div>
+    <a>
+      <div class="header-share st_sharethis_large" (mouseover)="locateShareThis()">
+        <i class="fa fa-share-alt"></i>
+      </div>
+    </a>
+</div>

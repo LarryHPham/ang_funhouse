@@ -1,0 +1,39 @@
+<section class="module-container">
+    <module-header [module_title]="moduleTitle"></module-header>
+    <div class="crime-stats">
+        <div class="crime-stats-header">
+            <i class="fa fa-th-large"></i>Crimes <span class="text-right">Net %</span>
+        </div>
+        <ul class="crime-stats-list">
+            <li *ngFor="#item of crimeStats" class="crime-stats-item {{item.class}}">
+                {{item.title}} <span class="text-right text-bold">{{item.pct}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="crime-pie">
+        <div id="crime-pie"></div>
+        <img class="crime-pie-image" src="{{imageUrl}}" onerror="this.src='/app/public/placeholder-location.jpg';" />
+    </div>
+
+    <div class="crime-tooltip">
+        <span class="bold">{{tooltipTitle}}</span> {{tooltipData}}
+    </div>
+
+    <!--<ul class="crime-list">-->
+        <!--<li *ngFor = "#item of crimeList" class="crime-list-item">-->
+            <!--<div class="crime-list-item-img">-->
+                <!--<img id="{{item.imgId}}" src="{{item.imgSrc}}" />-->
+            <!--</div>-->
+            <!--<div class="crime-list-item-text">-->
+                <!--<span class="crime-list-item-text-title">-->
+                    <!--Crime - <span class="crime-list-item-text-bold">{{item.type}}</span>-->
+                <!--</span>-->
+                <!--<span class="crime-list-item-text-description">-->
+                   <!--{{item.description}} <span class="crime-list-item-text-date">{{item.date}}</span>-->
+                <!--</span>-->
+            <!--</div>-->
+            <!--<i class="fa fa-angle-right"></i>-->
+        <!--</li>-->
+    <!--</ul>-->
+</section>

@@ -1,0 +1,80 @@
+.al{
+  display: flex;
+  padding: 20px;
+  width: 680px;
+  height: 165px;
+  &.odd {
+    background: @white;
+  }
+  &.even {
+    background: @backgroundGrey;
+  }
+  &-imagebox{
+    width: 150px;
+  }
+  &-location{
+    color: @black;
+  }
+  &-image{
+    width: 150px;
+    .largeRoundImageLinkWithHover(125px, 3px, @masterStrokeColor);
+    &-rank{
+      text-align: center;
+      padding-top: 12px;
+      color: @black;
+      width: 42px;
+      height: 42px;
+      border: 1px solid @backgroundGrey;
+      border-radius: 50%;
+      position: relative;
+      top: -130px;
+      background-color: @white;
+    }
+  }//image ends
+  &-loc{
+    margin-left: 20px;
+    .globalDefaultModFont(12px, 400, @black);
+    span:first-child{
+      color: @masterBrandColor;
+    }
+  }
+  &-bottom{
+    .globalDefaultModFont(12px, 400, @white) !important;
+    .flexDirection(column);
+    border: 1px solid @strokeGrey;
+    border-radius: 5px;
+    padding: 3px;
+    p {
+      .globalDefaultModFont(14px, 400, @black) !important;
+      margin-top: 8px;
+      margin-left: 5px;
+      margin-bottom: 0px;
+    }
+    &.odd {
+      background: @backgroundGrey;
+    }
+    &.even {
+      background: @white;
+    }
+  }
+  &-name{
+    margin: 10px 0 0 20px;
+    .globalDefaultModFont(24px, 900, @black);
+  }
+  &-desc{
+    margin: 12px 0 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 500px;
+    height: 80px;
+    line-height: 16px;
+    .globalDefaultModFont(14px, 400, @black);
+  }
+  &-provider{
+    bottom: 0;
+    margin: 0 225px;
+  }
+}
+.colorReset{
+  color: @masterBrandColor;
+}

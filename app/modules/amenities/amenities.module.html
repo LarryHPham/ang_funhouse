@@ -1,0 +1,16 @@
+<section *ngIf="amenitiesData" class="module-container amen">
+    <module-header [module_title]="moduleTitle"></module-header>
+    <div class="amen-body">
+        <div *ngIf="listData">
+            <amenities-component [hasFooterButton]="hasFooterButton" [list_data]="listData" (scrollLeft)="left()" (scrollRight)="right()"></amenities-component>
+        </div>
+
+        <div class="amen-tiles">
+            <!-- <div class="amen-tiles-scroll" id="up"><i class="fa fa-chevron-up"></i></div> -->
+            <tiles-component [tile_data]="tileData"></tiles-component>
+            <!-- <div class="amen-tiles-scroll" id="down"><i class="fa fa-chevron-down"></i></div> -->
+        </div>
+    </div>
+    <!--Provider Yelp Logo Bottom Right-->
+    <a href="{{providerUrl}}"><img class="amen-provider" src='{{providerLogo}}' /></a>
+</section>

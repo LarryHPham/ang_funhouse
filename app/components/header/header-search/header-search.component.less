@@ -1,0 +1,47 @@
+.header-search {
+  margin-top: 10px;
+  text-align: right;
+  position: absolute;
+  top: -2px;
+  right: 4%;
+  width: 35%;
+  .fa {
+    color: #44b224;
+    font-size: 18px;
+  }
+  .header-button{
+    height:16px;
+    width:16px;
+    outline:none;
+    background: none;
+    border: none;
+    float: right;
+    position: relative;
+    top: -27px;
+    right: 9px;
+    padding:0;
+    cursor:pointer;
+  }
+}
+
+//Needed id styling to group search input and results dropdown. results dropdown is absolutely bound to this container
+#header-search-full-container{
+  position: relative;
+  search-results{
+    #result-item{
+      overflow: hidden;
+      height:19px;
+    }
+  }
+}
+
+.header-search input {
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  &:focus {
+    border: 1px solid #666;
+    outline: none;
+  }
+}

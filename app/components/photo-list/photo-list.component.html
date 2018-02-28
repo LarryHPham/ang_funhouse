@@ -1,0 +1,20 @@
+<div class="lv-image" >
+  <img src='{{imageData}}' class="lv-image-placeHolder"/>
+  <!-- <div class="lv-image-shade"></div> -->
+  <a class="lv-image-overlay" [routerLink]="[listData.url1,listData.url2,listData.url3]">
+    <div>{{listData.value | priceFormat}}</div>
+    <div>{{listData.title}}, {{listData.location}}</div>
+    <div></div>
+    <div class="lv-image-button">View Profile</div>
+  <!-- <circle-button (scrollRight)="right()" (scrollLeft)="left()"></circle-button> -->
+  </a>
+  <div class="lv-image-details">
+    <div>{{listData.value | priceFormat}}</div>
+    <div>{{listData.title}}</div>
+    <div>
+      <span>{{listData.numBed}}</span> |
+      <span>{{listData.numBath}}</span> |
+      <span>{{listData.tag}}</span>
+    </div>
+  </div>
+</div>

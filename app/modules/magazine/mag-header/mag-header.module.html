@@ -1,0 +1,21 @@
+<div class="magheader">
+    <span *ngIf="isPartner">
+        <div class="magheader_pagenum pagenumPartner"></div>
+        <i class="fa fa-bars barsPartner" id="tabs" (click)="toggleTabs()"></i>
+        <div class="magheader_but_cont tabsPartner">
+            <magtab-component [toc]="toc"></magtab-component>
+        </div>
+        <close-component></close-component>
+    </span>
+    <span *ngIf="!isPartner">
+        <div class="magheader_pagenum"></div>
+        <a [routerLink]="['../Webpages', 'Home-page']" class="magheader_logo"></a>
+        <div class="magheader_sep"></div>
+        <i class="fa fa-bars" id="tabs" (click)="toggleTabs()"></i>
+        <div class="magheader_but_cont">
+            <magtab-component [toc]="toc"></magtab-component>
+        </div>
+        <close-component></close-component>
+        <share-component></share-component>
+    </span>
+</div>

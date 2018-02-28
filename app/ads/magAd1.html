@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var embedURL = "http://content.synapsys.us/embeds/realestate/standard/joyful.js";
+            var widgetURL = "";  //ad-stack only (solo)
+            var domain = "joyfulhome.com";
+            var q = {
+                dom: domain,
+                type: "realestate_solo",
+                subd: false,
+                remn: true,
+                src: embedURL,
+                name: "joyfulhome_com_realestate_magazine_300x250",
+                widU: widgetURL,
+                widW: 0,  //the widget's width
+                widH: 0,  //the widget's height
+                adW: 300,  //the ad's width
+                adH: 250,  //the ad's height
+                ofx: 0,  //offset in the X direction that the ad-stack needs to be adjusted to match the designated ad-space for this widget
+                ofy: 0,  //offset in the Y direction that the ad-stack needs to be adjusted to match the designated ad-space for this widget
+                rand: Math.random() * 10000000000000000000,
+            };
+
+            var newScript = document.createElement("script");
+            newScript.src = "http://content.synapsys.us/l/n/index-mdb.php?" + Object.keys(q).map(function (key) {
+                        return encodeURIComponent(key) + "=" + encodeURIComponent(q[key])
+                    }).join("&");
+            $('#adzone').html('');
+            $('#adzone')[0].appendChild(newScript);
+        })
+    </script>
+</head>
+<body style="padding:0; margin:0; overflow:hidden;">
+<div id='adzone' class='mag_adzone'></div>
+</body>
+</html>
